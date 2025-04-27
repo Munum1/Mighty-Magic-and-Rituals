@@ -1,8 +1,7 @@
 package net.munum.magicnrituals;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,13 +13,14 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.munum.magicnrituals.block.ModBlocks;
+import net.munum.magicnrituals.item.ModCreativeModeTabs;
+import net.munum.magicnrituals.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(magicnrituals.MOD_ID)
-public class magicnrituals {
+@Mod(MagicnRituals.MOD_ID)
+public class MagicnRituals {
 
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "magicnrituals";
@@ -28,14 +28,18 @@ public class magicnrituals {
     private static final Logger LOGGER = LogUtils.getLogger();
 
 
-    public magicnrituals(FMLJavaModLoadingContext context) {
+    public MagicnRituals(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register((modEventBus));
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -50,7 +54,18 @@ public class magicnrituals {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RED_RUBY);
+            event.accept(ModItems.RAW_RED_RUBY);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.RED_RUBY_BLOCK);
+            event.accept(ModBlocks.RAW_RUBY_BLOCK);
+            event.accept(ModBlocks.RED_RUBY_DEEPSLATE_ORE);
+            event.accept(ModBlocks.RED_RUBY_ORE);
+
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
