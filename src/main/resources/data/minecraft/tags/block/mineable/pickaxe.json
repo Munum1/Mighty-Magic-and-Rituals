@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "magicnrituals:raw_ruby_block",
-    "magicnrituals:red_ruby_block",
-    "magicnrituals:red_ruby_deepslate_ore",
-    "magicnrituals:red_ruby_ore"
+    "magicnrituals:ruby_block",
+    "magicnrituals:ruby_deepslate_ore",
+    "magicnrituals:ruby_ore"
   ]
 }

@@ -55,15 +55,22 @@ public class MagicnRituals {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.RED_RUBY);
-            event.accept(ModItems.RAW_RED_RUBY);
+            event.accept(ModItems.RAW_RUBY);
+            event.accept(ModItems.RUBY);
+
+
+            event.accept(ModItems.CHISEL.get());
+
+            event.accept(ModItems.GARLIC.get());
+            event.accept(ModItems.GARLIC_BREAD.get());
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.RED_RUBY_BLOCK);
+            event.accept(ModBlocks.RUBY_BLOCK);
             event.accept(ModBlocks.RAW_RUBY_BLOCK);
-            event.accept(ModBlocks.RED_RUBY_DEEPSLATE_ORE);
-            event.accept(ModBlocks.RED_RUBY_ORE);
+            event.accept(ModBlocks.RUBY_DEEPSLATE_ORE);
+            event.accept(ModBlocks.RUBY_ORE);
+
 
         }
     }

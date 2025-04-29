@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "magicnrituals:red_ruby"
+      "item": "magicnrituals:ruby"
     }
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "magicnrituals:red_ruby_block"
+    "id": "magicnrituals:ruby_block"
   }
 }

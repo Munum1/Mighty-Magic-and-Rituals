@@ -1,11 +1,17 @@
 {
-  "item.magicnrituals.red_ruby": "Red Ruby",
-  "item.magicnrituals.raw_red_ruby": "Raw Red Ruby",
+  "item.magicnrituals.ruby": "Ruby",
+  "item.magicnrituals.raw_ruby": "Raw Ruby",
 
-  "block.magicnrituals.red_ruby_block": "Red Ruby Block",
-  "block.magicnrituals.raw_ruby_block": "Block of Raw Red Ruby",
-  "block.magicnrituals.red_ruby_ore": "Red Ruby Ore",
-  "block.magicnrituals.red_ruby_deepslate_ore": "Red Ruby Deepslate Ore",
+  "item.magicnrituals.chisel": "Chisel",
+  "item.magicnrituals.garlic": "Raw Garlic",
+  "item.magicnrituals.garlic_bread": "Garlic Bread",
+
+  "block.magicnrituals.ruby_block": "Ruby Block",
+  "block.magicnrituals.raw_ruby_block": "Block of Raw Ruby",
+  "block.magicnrituals.ruby_ore": "Ruby Ore",
+  "block.magicnrituals.ruby_deepslate_ore": "Ruby Deepslate Ore",
+
+  "block.magicnrituals.altar_block": "Magic Altar",
 
   "creativetab.magicnrituals.magic_and_rituals_items": "Mighty: Magic and Rituals Items",
   "creativetab.magicnrituals.magic_and_rituals_blocks": "Mighty: Magic and Rituals Blocks"

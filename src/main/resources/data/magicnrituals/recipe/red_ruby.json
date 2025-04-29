@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "magicnrituals:red_ruby_block"
+      "item": "magicnrituals:ruby_block"
     }
   ],
   "result": {
     "count": 9,
-    "id": "magicnrituals:red_ruby"
+    "id": "magicnrituals:ruby"
   }
 }

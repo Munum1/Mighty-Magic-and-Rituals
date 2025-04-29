@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
+import net.munum.magicnrituals.block.custom.AltarBlock;
 import net.munum.magicnrituals.item.ModItems;
 import java.util.function.Supplier;
 
@@ -20,7 +21,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, MagicnRituals.MOD_ID);
 
-    public static final RegistryObject<Block> RED_RUBY_BLOCK = registerBlock("red_ruby_block",
+    public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
@@ -30,14 +31,20 @@ public class ModBlocks {
                     .strength(3f).requiresCorrectToolForDrops()));
 
 
-    public static final RegistryObject<Block> RED_RUBY_ORE = registerBlock("red_ruby_ore",
+    public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,3), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
 
 
-    public static final RegistryObject<Block> RED_RUBY_DEEPSLATE_ORE = registerBlock("red_ruby_deepslate_ore",
+    public static final RegistryObject<Block> RUBY_DEEPSLATE_ORE = registerBlock("ruby_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,3), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> ALTAR_BLOCK = registerBlock("altar_block",
+            () -> new AltarBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+
+
+
 
 
 
