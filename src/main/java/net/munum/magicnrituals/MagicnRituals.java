@@ -60,6 +60,7 @@ public class MagicnRituals {
 
 
             event.accept(ModItems.CHISEL.get());
+            event.accept(ModItems.MOONSTONE.get());
 
             event.accept(ModItems.GARLIC.get());
             event.accept(ModItems.GARLIC_BREAD.get());

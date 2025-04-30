@@ -1,19 +1,26 @@
 package net.munum.magicnrituals.block.custom;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.munum.magicnrituals.item.ModItems;
+import net.munum.magicnrituals.util.ModTags;
+
+import java.util.List;
 
 public class AltarBlock extends Block {
     public AltarBlock(Properties p_49795_) {
@@ -30,7 +37,7 @@ public class AltarBlock extends Block {
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         if(pEntity instanceof ItemEntity itemEntity) {
-            if (itemEntity.getItem().getItem() == ModItems.RUBY.get()) {
+            if(isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(Items.DIAMOND,itemEntity.getItem().getCount()));
             }
 
@@ -39,5 +46,21 @@ public class AltarBlock extends Block {
             }
         }
         super.stepOn(pLevel, pPos, pState, pEntity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+        if(Screen.hasShiftDown()) {
+        pTooltipComponents.add(Component.translatable("tooltip.magicnrituals.altar_block.shift_down"));
+
+        } else {
+            pTooltipComponents.add(Component.translatable("tooltip.magicnrituals.altar_block"));
+
+    }
+        super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
 }

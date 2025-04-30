@@ -7,6 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
 import net.munum.magicnrituals.item.custom.ChiselItem;
+import net.munum.magicnrituals.item.custom.FuelItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -26,6 +27,9 @@ public class ModItems {
 
   public static final RegistryObject<Item> GARLIC_BREAD = ITEMS.register("garlic_bread",
             () -> new Item(new Item.Properties().food(ModFoodProperties.GARLIC_BREAD)));
+
+  public static final RegistryObject<Item> MOONSTONE = ITEMS.register("moonstone",
+            () -> new FuelItem(new Item.Properties(),1200));
 
 
     public static void register(IEventBus eventBus){

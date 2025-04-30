@@ -5,6 +5,8 @@
   "item.magicnrituals.chisel": "Chisel",
   "item.magicnrituals.garlic": "Raw Garlic",
   "item.magicnrituals.garlic_bread": "Garlic Bread",
+  "item.magicnrituals.moonstone": "Moonstone",
+  "item.magicnrituals.moonstone_block": "Block of Moonstone",
 
   "block.magicnrituals.ruby_block": "Ruby Block",
   "block.magicnrituals.raw_ruby_block": "Block of Raw Ruby",
@@ -14,7 +16,12 @@
   "block.magicnrituals.altar_block": "Magic Altar",
 
   "creativetab.magicnrituals.magic_and_rituals_items": "Mighty: Magic and Rituals Items",
-  "creativetab.magicnrituals.magic_and_rituals_blocks": "Mighty: Magic and Rituals Blocks"
+  "creativetab.magicnrituals.magic_and_rituals_blocks": "Mighty: Magic and Rituals Blocks",
 
+  "tooltip.magicnrituals.altar_block.shift_down": "The Magic Altar transforms items into different ones.",
+  "tooltip.magicnrituals.altar_block": "Press Shift for more information!",
+
+  "tooltip.magicnrituals.chisel.shift_down": "This Item changes placed blocks.",
+  "tooltip.magicnrituals.chisel": "Press Shift for more information!"
 
 }

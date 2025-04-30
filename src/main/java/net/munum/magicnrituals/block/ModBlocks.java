@@ -43,6 +43,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALTAR_BLOCK = registerBlock("altar_block",
             () -> new AltarBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
+            () -> new AltarBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.LARGE_AMETHYST_BUD)));
+
+
+
 
 
 

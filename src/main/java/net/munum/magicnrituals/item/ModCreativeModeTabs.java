@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GARLIC_BREAD.get());
                         output.accept(ModItems.GARLIC.get());
                         output.accept(ModItems.CHISEL.get());
+                        output.accept(ModItems.MOONSTONE.get());
 
 
                         })
@@ -38,6 +39,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_RUBY_BLOCK.get());
 
                         output.accept(ModBlocks.ALTAR_BLOCK.get());
+                        output.accept(ModBlocks.MOONSTONE_BLOCK.get());
 
                         })
                             .build());
