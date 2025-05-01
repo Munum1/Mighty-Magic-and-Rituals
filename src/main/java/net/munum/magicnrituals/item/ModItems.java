@@ -19,6 +19,12 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ROSE_QUARTZ = ITEMS.register("ruby",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_ROSE_QUARTZ = ITEMS.register("raw_rose_quartz",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
 

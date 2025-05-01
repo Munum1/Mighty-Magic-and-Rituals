@@ -31,7 +31,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.RUBY_BLOCK.get());
+        dropSelf(ModBlocks.ROSE_QUARTZ_BLOCK.get());
         dropSelf(ModBlocks.RAW_RUBY_BLOCK.get());
+        dropSelf(ModBlocks.RAW_ROSE_QUARTZ_BLOCK.get());
         dropSelf(ModBlocks.ALTAR_BLOCK.get());
         dropSelf(ModBlocks.MOONSTONE_BLOCK.get());
 
@@ -39,7 +41,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RAW_RUBY.get()));
         this.add(ModBlocks.RUBY_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RAW_RUBY.get(),2,4));
+                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RAW_RUBY.get(),1,2));
+        this.add(ModBlocks.ROSE_QUARTZ_ORE.get(),
+                block -> createOreDrop(ModBlocks.ROSE_QUARTZ_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get()));
+        this.add(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get(),1,2));
+
 
         dropSelf(ModBlocks.RUBY_STAIRS.get());
         this.add(ModBlocks.RUBY_SLAB.get(),

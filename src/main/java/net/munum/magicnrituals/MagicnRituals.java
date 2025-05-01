@@ -71,6 +71,8 @@ public class MagicnRituals {
             event.accept(ModBlocks.RAW_RUBY_BLOCK);
             event.accept(ModBlocks.RUBY_DEEPSLATE_ORE);
             event.accept(ModBlocks.RUBY_ORE);
+            event.accept(ModBlocks.ROSE_QUARTZ_ORE);
+            event.accept(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE);
 
 
         }

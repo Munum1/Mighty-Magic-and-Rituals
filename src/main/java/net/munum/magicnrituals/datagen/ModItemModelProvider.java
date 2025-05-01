@@ -22,6 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.RUBY.get());
+        basicItem(ModItems.ROSE_QUARTZ.get());
         basicItem(ModItems.RAW_RUBY.get());
 
         basicItem(ModItems.CHISEL.get());

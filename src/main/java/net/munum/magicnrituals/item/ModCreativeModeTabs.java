@@ -20,7 +20,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.magicnrituals.magic_and_rituals_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RAW_RUBY.get());
+                        output.accept(ModItems.RAW_ROSE_QUARTZ.get());
                         output.accept(ModItems.RUBY.get());
+                        output.accept(ModItems.ROSE_QUARTZ.get());
                         output.accept(ModItems.GARLIC_BREAD.get());
                         output.accept(ModItems.GARLIC.get());
                         output.accept(ModItems.CHISEL.get());
@@ -36,7 +38,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.magicnrituals.magic_and_rituals_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.RUBY_BLOCK.get());
+                        output.accept(ModBlocks.ROSE_QUARTZ_BLOCK.get());
                         output.accept(ModBlocks.RAW_RUBY_BLOCK.get());
+                        output.accept(ModBlocks.RAW_ROSE_QUARTZ_BLOCK.get());
 
                         output.accept(ModBlocks.ALTAR_BLOCK.get());
                         output.accept(ModBlocks.MOONSTONE_BLOCK.get());
