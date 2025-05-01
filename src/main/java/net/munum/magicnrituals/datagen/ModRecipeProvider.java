@@ -46,6 +46,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A' , ModItems.MOONSTONE.get())
                 .unlockedBy(getHasName(ModItems.MOONSTONE.get()), has(ModItems.MOONSTONE.get())).save(pRecipeOutput );
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_LAMP.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern(" A ")
+                .define('A' , Items.REDSTONE)
+                .define('B', ModBlocks.RUBY_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()), has(Items.REDSTONE)).save(pRecipeOutput );
+
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.RUBY.get(), 9)
                 .requires(ModBlocks.RUBY_BLOCK.get())
@@ -56,8 +66,38 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.BREAD)
                 .unlockedBy(getHasName(ModItems.GARLIC_BREAD.get()),has(ModItems.GARLIC_BREAD.get())).save(pRecipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CHISEL.get(), 1)
+                        .requires(ModItems.RUBY.get())
+                        .requires(Items.STICK)
+                        .unlockedBy(getHasName(ModItems.CHISEL.get()), has(ModItems.CHISEL.get())).save(pRecipeOutput);
+
         oreSmelting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,200,"ruby");
         oreBlasting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,100,"ruby");
+
+        stairBuilder(ModBlocks.RUBY_STAIRS.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_SLAB.get(), ModItems.RUBY.get());
+
+        buttonBuilder(ModBlocks.RUBY_BUTTON.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.RUBY_PRESSURE_PLATE.get(), ModItems.RUBY.get());
+
+        fenceBuilder(ModBlocks.RUBY_FENCE.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.RUBY_FENCE_GATE.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_WALL.get(), ModItems.RUBY.get());
+
+        doorBuilder(ModBlocks.RUBY_DOOR.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.RUBY_TRAPDOOR.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+
+
+
+
+
 
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

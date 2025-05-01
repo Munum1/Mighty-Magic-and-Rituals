@@ -15,6 +15,21 @@
 
   "block.magicnrituals.altar_block": "Magic Altar",
 
+  "block.magicnrituals.ruby_stairs": "Ruby Stairs",
+  "block.magicnrituals.ruby_slab": "Ruby Slab",
+
+  "block.magicnrituals.ruby_button": "Ruby Button",
+  "block.magicnrituals.ruby_pressure_plate": "Ruby Pressure Plate",
+
+  "block.magicnrituals.ruby_fence": "Ruby Fence",
+  "block.magicnrituals.ruby_fence_gate": "Ruby Fence Gate",
+  "block.magicnrituals.ruby_wall": "Ruby Wall",
+
+  "block.magicnrituals.ruby_door": "Ruby Door",
+  "block.magicnrituals.ruby_trapdoor": "Ruby Trapdoor",
+  "block.magicnrituals.ruby_lamp": "Ruby Lamp",
+
+
   "creativetab.magicnrituals.magic_and_rituals_items": "Mighty: Magic and Rituals Items",
   "creativetab.magicnrituals.magic_and_rituals_blocks": "Mighty: Magic and Rituals Blocks",
 

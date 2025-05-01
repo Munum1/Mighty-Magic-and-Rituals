@@ -32,6 +32,8 @@ public class ModItems {
             () -> new FuelItem(new Item.Properties(),1200));
 
 
+
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

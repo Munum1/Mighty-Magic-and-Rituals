@@ -1,12 +1,18 @@
 package net.munum.magicnrituals.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
 import net.munum.magicnrituals.block.ModBlocks;
+import net.munum.magicnrituals.block.custom.RubyLampBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output,ExistingFileHelper exFileHelper) {
@@ -25,9 +31,64 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.MOONSTONE_BLOCK);
 
+        stairsBlock(ModBlocks.RUBY_STAIRS.get(), blockTexture(ModBlocks.RUBY_BLOCK.get()));
+        slabBlock(ModBlocks.RUBY_SLAB.get(), blockTexture(ModBlocks.RUBY_BLOCK.get()), blockTexture(ModBlocks.RUBY_BLOCK.get()));
+
+        buttonBlock(ModBlocks.RUBY_BUTTON.get(), blockTexture(ModBlocks.RUBY_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.RUBY_PRESSURE_PLATE.get(), blockTexture(ModBlocks.RUBY_BLOCK.get()));
+
+        fenceBlock(ModBlocks.RUBY_FENCE.get(), blockTexture(ModBlocks.RUBY_BLOCK.get()));
+        fenceGateBlock(ModBlocks.RUBY_FENCE_GATE.get(), blockTexture(ModBlocks.RUBY_BLOCK.get()));
+        wallBlock(ModBlocks.RUBY_WALL.get(), blockTexture(ModBlocks.RUBY_BLOCK.get()));
+
+        doorBlockWithRenderType(ModBlocks.RUBY_DOOR.get(), modLoc("block/ruby_door_bottom"), modLoc("block/ruby_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.RUBY_TRAPDOOR.get(), modLoc("block/ruby_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.RUBY_STAIRS);
+        blockItem(ModBlocks.RUBY_SLAB);
+        blockItem(ModBlocks.RUBY_PRESSURE_PLATE);
+        blockItem(ModBlocks.RUBY_FENCE_GATE);
+        blockItem(ModBlocks.RUBY_TRAPDOOR, "_bottom");
+
+
+        customLamp();
+
+
+
     }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockWithItem(blockRegistryObject.get(),cubeAll(blockRegistryObject.get()));
+    private void customLamp() {
+        getVariantBuilder(ModBlocks.RUBY_LAMP.get()).forAllStates(state -> {
+            if (state.getValue(RubyLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("ruby_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(MagicnRituals.MOD_ID, "block/ruby_lamp_on")))};
+
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("ruby_lamp_off",
+                        ResourceLocation.fromNamespaceAndPath(MagicnRituals.MOD_ID, "block/ruby_lamp_off")))};
+
+            }
+
+        });
+        simpleBlockItem(ModBlocks.RUBY_LAMP.get(), models().cubeAll("ruby_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(MagicnRituals.MOD_ID, "block/" + "ruby_lamp_on")));
+
+    }
+
+
+        private void blockWithItem (RegistryObject < Block > blockRegistryObject) {
+            simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+
+    private void blockItem(RegistryObject<? extends Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("magicnrituals:block/" +
+                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    private void blockItem(RegistryObject<? extends Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("magicnrituals:block/" +
+                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 }
+
