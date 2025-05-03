@@ -2,6 +2,7 @@ package net.munum.magicnrituals.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -11,6 +12,8 @@ import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
 import net.munum.magicnrituals.block.ModBlocks;
 import net.munum.magicnrituals.item.ModItems;
+
+import static net.minecraft.client.gui.components.ImageWidget.texture;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -23,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.RUBY.get());
         basicItem(ModItems.ROSE_QUARTZ.get());
+        basicItem(ModItems.RAW_ROSE_QUARTZ.get());
         basicItem(ModItems.RAW_RUBY.get());
 
         basicItem(ModItems.CHISEL.get());
@@ -38,10 +42,20 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.RUBY_DOOR);
 
-
+        handheldItem(ModItems.RUBY_SWORD);
+        handheldItem(ModItems.RUBY_PICKAXE);
+        handheldItem(ModItems.RUBY_SHOVEL);
+        handheldItem(ModItems.RUBY_AXE);
+        handheldItem(ModItems.RUBY_HOE);
 
     }
 
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> Item) {
+        return withExistingParent(Item.getId().getPath(),
+            ResourceLocation.parse("item/handheld")).texture("layer0",
+            ResourceLocation.fromNamespaceAndPath(MagicnRituals.MOD_ID, "item/" + Item.getId().getPath()));
+    }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))

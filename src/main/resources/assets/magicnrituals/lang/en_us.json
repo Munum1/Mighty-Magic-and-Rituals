@@ -1,6 +1,8 @@
 {
   "item.magicnrituals.ruby": "Ruby",
+  "item.magicnrituals.rose_quartz": "Rose Quartz",
   "item.magicnrituals.raw_ruby": "Raw Ruby",
+  "item.magicnrituals.raw_rose_quartz": "Raw Rose Quartz",
 
   "item.magicnrituals.chisel": "Chisel",
   "item.magicnrituals.garlic": "Raw Garlic",
@@ -8,10 +10,20 @@
   "item.magicnrituals.moonstone": "Moonstone",
   "item.magicnrituals.moonstone_block": "Block of Moonstone",
 
+  "item.magicnrituals.ruby_sword": "Ruby Sword",
+  "item.magicnrituals.ruby_pickaxe": "Ruby Pickaxe",
+  "item.magicnrituals.ruby_axe": "Ruby Axe",
+  "item.magicnrituals.ruby_shovel": "Ruby Shovel",
+  "item.magicnrituals.ruby_hoe": "Ruby Hoe",
+
   "block.magicnrituals.ruby_block": "Ruby Block",
+  "block.magicnrituals.rose_quartz_block": "Rose Quartz Block",
   "block.magicnrituals.raw_ruby_block": "Block of Raw Ruby",
+  "block.magicnrituals.raw_rose_quartz_block": "Block of Raw Rose Quartz",
   "block.magicnrituals.ruby_ore": "Ruby Ore",
+  "block.magicnrituals.rose_quartz_ore": "Rose Quartz Ore",
   "block.magicnrituals.ruby_deepslate_ore": "Ruby Deepslate Ore",
+  "block.magicnrituals.rose_quartz_deepslate_ore": "Rose Quartz Deepslate Ore",
 
   "block.magicnrituals.altar_block": "Magic Altar",
 

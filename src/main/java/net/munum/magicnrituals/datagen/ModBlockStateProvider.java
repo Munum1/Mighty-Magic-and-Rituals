@@ -22,10 +22,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.RUBY_BLOCK);
+        blockWithItem(ModBlocks.ROSE_QUARTZ_BLOCK);
         blockWithItem(ModBlocks.RAW_RUBY_BLOCK);
+        blockWithItem(ModBlocks.RAW_ROSE_QUARTZ_BLOCK);
 
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.RUBY_ORE);
+        blockWithItem(ModBlocks.ROSE_QUARTZ_ORE);
 
         blockWithItem(ModBlocks.ALTAR_BLOCK);
 

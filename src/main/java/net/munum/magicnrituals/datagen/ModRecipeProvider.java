@@ -24,6 +24,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> RUBY_SMELTABLES = List.of(ModItems.RAW_RUBY.get(),
                 ModBlocks.RUBY_ORE.get(), ModBlocks.RUBY_DEEPSLATE_ORE.get());
 
+        List<ItemLike> ROSE_QUARTZ_SMELTABLES = List.of(ModItems.RAW_ROSE_QUARTZ.get(),
+                ModBlocks.ROSE_QUARTZ_ORE.get(), ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get());
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
                 .pattern("AAA")
@@ -32,12 +35,63 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A' , ModItems.RUBY.get())
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput );
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_SWORD.get())
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" B ")
+                .define('A' , ModItems.RUBY.get())
+                .define('B' , Items.STICK)
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A' , ModItems.RUBY.get())
+                .define('B' , Items.STICK)
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_SHOVEL.get())
+                .pattern(" A ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A' , ModItems.RUBY.get())
+                .define('B' , Items.STICK)
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_AXE.get())
+                .pattern("AA ")
+                .pattern("AB ")
+                .pattern(" B ")
+                .define('A' , ModItems.RUBY.get())
+                .define('B' , Items.STICK)
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_HOE.get())
+                .pattern("AA ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A' , ModItems.RUBY.get())
+                .define('B' , Items.STICK)
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+
+
+
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_RUBY_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A' , ModItems.RAW_RUBY.get())
-                .unlockedBy(getHasName(ModItems.RAW_RUBY.get()), has(ModItems.RAW_RUBY.get())).save(pRecipeOutput );
+                .unlockedBy(getHasName(ModItems.RAW_RUBY.get()), has(ModItems.RAW_RUBY.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_ROSE_QUARTZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A' , ModItems.RAW_ROSE_QUARTZ.get())
+                .unlockedBy(getHasName(ModItems.RAW_ROSE_QUARTZ.get()), has(ModItems.RAW_ROSE_QUARTZ.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOONSTONE_BLOCK.get())
                 .pattern("AAA")
@@ -46,6 +100,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A' , ModItems.MOONSTONE.get())
                 .unlockedBy(getHasName(ModItems.MOONSTONE.get()), has(ModItems.MOONSTONE.get())).save(pRecipeOutput );
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ROSE_QUARTZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A' , ModItems.ROSE_QUARTZ.get())
+                .unlockedBy(getHasName(ModItems.ROSE_QUARTZ.get()), has(ModItems.ROSE_QUARTZ.get())).save(pRecipeOutput );
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_LAMP.get())
                 .pattern(" A ")
                 .pattern("ABA")
@@ -53,6 +114,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A' , Items.REDSTONE)
                 .define('B', ModBlocks.RUBY_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()), has(Items.REDSTONE)).save(pRecipeOutput );
+
+
 
 
 
@@ -72,7 +135,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModItems.CHISEL.get()), has(ModItems.CHISEL.get())).save(pRecipeOutput);
 
         oreSmelting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,200,"ruby");
+        oreSmelting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_QUARTZ.get(),0.25f,200,"rose_quartz");
         oreBlasting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,100,"ruby");
+        oreBlasting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_QUARTZ.get(),0.25f,100,"rose_quartz");
 
         stairBuilder(ModBlocks.RUBY_STAIRS.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);

@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.munum.magicnrituals.block.ModBlocks;
+import net.munum.magicnrituals.component.ModDataComponentTypes;
 import net.munum.magicnrituals.item.ModCreativeModeTabs;
 import net.munum.magicnrituals.item.ModItems;
 import org.slf4j.Logger;
@@ -39,6 +40,8 @@ public class MagicnRituals {
 
         ModItems.register(modEventBus);
         ModBlocks.register((modEventBus));
+
+        ModDataComponentTypes.register(modEventBus);
 
 
         // Register the item to a creative tab
