@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "magicnrituals:block/ruby_lamp_off"
+    },
+    "clicked=true": {
+      "model": "magicnrituals:block/ruby_lamp_on"
+    }
+  }
+}

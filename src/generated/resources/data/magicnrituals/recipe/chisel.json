@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "magicnrituals:ruby"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:chisel"
+  }
+}

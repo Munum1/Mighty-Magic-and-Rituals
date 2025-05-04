@@ -1,0 +1,8 @@
+// 1.21.1	2025-05-03T19:05:26.0422646	Tags for minecraft:block mod id magicnrituals
+92a650528f4a41d34bae9830e4a6edbd6ff669a8 data/magicnrituals/tags/block/incorrect_for_ruby_tool.json
+088cac8cd6368918dddf404f73fc74203d68577b data/magicnrituals/tags/block/needs_ruby_tool.json
+8ff974f6dba6b7b05aee0622b128dfd86712594a data/minecraft/tags/block/fences.json
+60d06d10b5cfbbf864c02daf816940b5a452dc68 data/minecraft/tags/block/fence_gates.json
+4a88cf451c43c79c8343f4be59499b3fccc6371d data/minecraft/tags/block/mineable/pickaxe.json
+ba77c49c72d6525910f2a8ead90475af80c8edcf data/minecraft/tags/block/needs_iron_tool.json
+283eb2ea04685931ff14206d4c74d9df3a39d049 data/minecraft/tags/block/walls.json

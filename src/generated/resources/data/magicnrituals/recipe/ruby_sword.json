@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "magicnrituals:ruby"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " A ",
+    " A ",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:ruby_sword"
+  }
+}

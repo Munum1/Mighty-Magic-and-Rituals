@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "ruby",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "magicnrituals:ruby"
+    }
+  },
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:ruby_fence_gate"
+  }
+}

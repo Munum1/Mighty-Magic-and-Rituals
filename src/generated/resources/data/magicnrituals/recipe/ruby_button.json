@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "ruby",
+  "ingredients": [
+    {
+      "item": "magicnrituals:ruby"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:ruby_button"
+  }
+}

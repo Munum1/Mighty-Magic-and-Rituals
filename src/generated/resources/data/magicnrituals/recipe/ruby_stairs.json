@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ruby",
+  "key": {
+    "#": {
+      "item": "magicnrituals:ruby"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "magicnrituals:ruby_stairs"
+  }
+}
