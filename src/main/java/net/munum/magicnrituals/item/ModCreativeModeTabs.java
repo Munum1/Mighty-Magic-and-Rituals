@@ -34,6 +34,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY_AXE.get());
                         output.accept(ModItems.RUBY_HOE.get());
 
+                        output.accept(ModItems.RUBY_HAMMER.get());
+
+                        output.accept(ModItems.RUBY_HELMET.get());
+                        output.accept(ModItems.RUBY_CHESTPLATE.get());
+                        output.accept(ModItems.RUBY_LEGGINGS.get());
+                        output.accept(ModItems.RUBY_BOOTS.get());
+
+                        output.accept(ModItems.RUBY_HORSE_ARMOR.get());
+
 
                         })
                             .build());

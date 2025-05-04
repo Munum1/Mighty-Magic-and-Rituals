@@ -6,8 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
-import net.munum.magicnrituals.item.custom.ChiselItem;
-import net.munum.magicnrituals.item.custom.FuelItem;
+import net.munum.magicnrituals.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -52,6 +51,27 @@ public class ModItems {
   public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
           () -> new HoeItem(ModToolTiers.RUBY, new Item.Properties()
                   .attributes(HoeItem.createAttributes(ModToolTiers.RUBY, 0, -3.0f))));
+
+  public static final RegistryObject<Item> RUBY_HAMMER = ITEMS.register("ruby_hammer",
+          () -> new HammerItem(ModToolTiers.RUBY, new Item.Properties()
+                  .attributes(PickaxeItem.createAttributes(ModToolTiers.RUBY, 7, -3.5f))));
+
+  public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
+          () -> new ModArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                  new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+  public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
+          () -> new ArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                  new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18))));
+  public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
+          () -> new ArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                  new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18))));
+  public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
+          () -> new ArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                  new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+
+  public static final RegistryObject<Item> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor",
+          () -> new AnimalArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                  false, new Item.Properties().stacksTo(1)));
 
 
 

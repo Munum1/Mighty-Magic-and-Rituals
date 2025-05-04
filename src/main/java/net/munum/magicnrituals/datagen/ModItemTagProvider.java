@@ -3,6 +3,7 @@ package net.munum.magicnrituals.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -27,5 +28,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.STICK)
                 .add(Items.COMPASS);
 
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.RUBY_HELMET.get())
+                .add(ModItems.RUBY_CHESTPLATE.get())
+                .add(ModItems.RUBY_LEGGINGS.get())
+                .add(ModItems.RUBY_BOOTS.get());
     }
 }

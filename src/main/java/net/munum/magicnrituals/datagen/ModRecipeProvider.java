@@ -75,8 +75,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B' , Items.STICK)
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
 
-
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_HAMMER.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern(" B ")
+                .define('A' , ModItems.RUBY.get())
+                .define('B' , Items.STICK)
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput );
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_RUBY_BLOCK.get())
@@ -114,6 +119,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A' , Items.REDSTONE)
                 .define('B', ModBlocks.RUBY_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()), has(Items.REDSTONE)).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_HELMET.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("   ")
+                .define('A', ModItems.RUBY.get())
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_CHESTPLATE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.RUBY.get())
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_LEGGINGS.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.RUBY.get())
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_BOOTS.get())
+                .pattern("   ")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.RUBY.get())
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
 
 
 
