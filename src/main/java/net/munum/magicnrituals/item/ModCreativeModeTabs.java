@@ -42,6 +42,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY_BOOTS.get());
 
                         output.accept(ModItems.RUBY_HORSE_ARMOR.get());
+                        output.accept(ModItems.MOONSTONE_BOW.get());
+
+                        output.accept(ModItems.GARLIC_SEEDS.get());
+
+                        output.accept(ModItems.SNOWBERRIES.get());
 
 
                         })

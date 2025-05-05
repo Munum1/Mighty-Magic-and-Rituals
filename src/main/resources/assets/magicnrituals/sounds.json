@@ -1,0 +1,39 @@
+{
+  "chisel_use": {
+    "subtitle": "sounds.magicnrituals.chisel_use",
+    "sounds": [
+      "magicnrituals:chisel_use"
+    ]
+  },
+  "altar_block_break": {
+    "subtitle": "sounds.magicnrituals.altar_block_break",
+    "sounds": [
+      "magicnrituals:altar_block_break"
+    ]
+  },
+  "altar_block_step": {
+    "subtitle": "sounds.magicnrituals.altar_block_step",
+    "sounds": [
+      "magicnrituals:altar_block_step"
+    ]
+  },
+  "altar_block_place": {
+    "subtitle": "sounds.magicnrituals.altar_block_place",
+    "sounds": [
+      "magicnrituals:altar_block_place"
+    ]
+  },
+  "altar_block_hit": {
+    "subtitle": "sounds.magicnrituals.altar_block_hit",
+    "sounds": [
+      "magicnrituals:altar_block_hit"
+    ]
+  },
+  "altar_block_fall": {
+    "subtitle": "sounds.magicnrituals.altar_block_fall",
+    "sounds": [
+      "magicnrituals:altar_block_fall"
+    ]
+  }
+}
+

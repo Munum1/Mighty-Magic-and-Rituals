@@ -1,0 +1,6 @@
+{
+  "parent": "magicnrituals:item/moonstone_bow",
+  "textures": {
+    "layer0": "magicnrituals:item/moonstone_bow_pulling_2"
+  }
+}

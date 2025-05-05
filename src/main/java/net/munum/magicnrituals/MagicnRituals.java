@@ -1,7 +1,9 @@
 package net.munum.magicnrituals;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -15,8 +17,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.munum.magicnrituals.block.ModBlocks;
 import net.munum.magicnrituals.component.ModDataComponentTypes;
+import net.munum.magicnrituals.effect.ModEffects;
 import net.munum.magicnrituals.item.ModCreativeModeTabs;
 import net.munum.magicnrituals.item.ModItems;
+import net.munum.magicnrituals.potion.ModPotions;
+import net.munum.magicnrituals.sound.ModSounds;
+import net.munum.magicnrituals.util.ModItemProperties;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -42,6 +48,10 @@ public class MagicnRituals {
         ModBlocks.register((modEventBus));
 
         ModDataComponentTypes.register(modEventBus);
+        ModSounds.register(modEventBus);
+
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -52,7 +62,10 @@ public class MagicnRituals {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.GARLIC.get(), 0.4f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.GARLIC_SEEDS.get(), 0.15f);
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -93,6 +106,7 @@ public class MagicnRituals {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ModItemProperties.addCustomItemProperties();
 
         }
     }

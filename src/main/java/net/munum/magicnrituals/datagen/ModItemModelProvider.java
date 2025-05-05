@@ -51,7 +51,7 @@ public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHe
             basicItem(ModItems.RAW_ROSE_QUARTZ.get());
             basicItem(ModItems.RAW_RUBY.get());
 
-            basicItem(ModItems.CHISEL.get());
+            //basicItem(ModItems.CHISEL.get());
 
             basicItem(ModItems.GARLIC.get());
             basicItem(ModItems.GARLIC_BREAD.get());
@@ -77,6 +77,9 @@ public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHe
             trimmedArmorItem(ModItems.RUBY_BOOTS);
 
             basicItem(ModItems.RUBY_HORSE_ARMOR.get());
+
+            basicItem(ModItems.GARLIC_SEEDS.get());
+            basicItem(ModItems.SNOWBERRIES.get());
 
         }
 

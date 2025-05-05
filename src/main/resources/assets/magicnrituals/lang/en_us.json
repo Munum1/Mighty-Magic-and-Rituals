@@ -17,6 +17,17 @@
   "item.magicnrituals.ruby_hoe": "Ruby Hoe",
 
   "item.magicnrituals.ruby_hammer": "Ruby Hammer",
+  "item.magicnrituals.moonstone_bow": "Moonstone Bow",
+
+  "item.magicnrituals.snowberries": "Snowberries",
+
+  "effect.magicnrituals.slimey": "Slimey",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
+  "item.magicnrituals.garlic_seeds": "Garlic Seeds",
 
   "item.magicnrituals.ruby_helmet": "Ruby Helmet",
   "item.magicnrituals.ruby_chestplate": "Ruby Chestplate",
@@ -49,6 +60,10 @@
   "block.magicnrituals.ruby_door": "Ruby Door",
   "block.magicnrituals.ruby_trapdoor": "Ruby Trapdoor",
   "block.magicnrituals.ruby_lamp": "Ruby Lamp",
+
+  "block.magicnrituals.garlic_crop": "Garlic Crop",
+
+  "block.magicnrituals.snowberry_bush": "Snowberry Bush",
 
 
   "creativetab.magicnrituals.magic_and_rituals_items": "Mighty: Magic and Rituals Items",

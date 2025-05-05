@@ -11,6 +11,8 @@ public class ModFoodProperties {
     public static final FoodProperties GARLIC_BREAD = new FoodProperties.Builder().nutrition(4).saturationModifier(0.35f)
             .effect(new MobEffectInstance(MobEffects.SATURATION , 400, 1), 0.85f).build();
 
+    public static final FoodProperties SNOWBERRIES = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2f)
+            .saturationModifier(0.15f).fast().build();
 
 }
 

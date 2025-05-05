@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "magicnrituals:item/chisel"
+  },
+    "overrides": [
+        {
+        "predicate": {
+            "magicnrituals:used": 1
+        },
+        "model": "magicnrituals:item/chisel_used"
+        }
+    ]
+}

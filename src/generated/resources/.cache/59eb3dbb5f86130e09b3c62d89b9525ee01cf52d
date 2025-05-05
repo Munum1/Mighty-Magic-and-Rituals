@@ -1,5 +1,6 @@
-// 1.21.1	2025-05-03T17:13:53.3913973	Loot Tables
+// 1.21.1	2025-05-05T18:51:40.6140417	Loot Tables
 9cb83c87f7cf9ceb3288f2404f1aa9348ddaf61d data/magicnrituals/loot_table/blocks/altar_block.json
+56699da3a3e7460bcc7d2ab13c4d3ee53c7b10d7 data/magicnrituals/loot_table/blocks/garlic_crop.json
 10e55b4baf1077429fb1523400c82da76b2b1106 data/magicnrituals/loot_table/blocks/moonstone_block.json
 10bb54d61a63ef3725406b0bede3e61cbe0b57e8 data/magicnrituals/loot_table/blocks/raw_rose_quartz_block.json
 95f47386ccc7ffa061c6930c4e7e3cf01e88b0e5 data/magicnrituals/loot_table/blocks/raw_ruby_block.json
@@ -19,3 +20,4 @@ af3fb758feac5928e047760b367469885e0494e0 data/magicnrituals/loot_table/blocks/ru
 c65d36c6f54d9a469a3f9d99a2e794d183e31992 data/magicnrituals/loot_table/blocks/ruby_stairs.json
 a67e8db92f068934c2a79c90ce0cc0136b0d7a6c data/magicnrituals/loot_table/blocks/ruby_trapdoor.json
 a246c4cbc5f518dd07a70007be069b808975758f data/magicnrituals/loot_table/blocks/ruby_wall.json
+1b6bbc7bafceb80ce83e29a9e8ee6edb379d1fcd data/magicnrituals/loot_table/blocks/snow_berry_bush.json

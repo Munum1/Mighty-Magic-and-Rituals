@@ -1,11 +1,13 @@
 package net.munum.magicnrituals.item;
 
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
+import net.munum.magicnrituals.block.ModBlocks;
 import net.munum.magicnrituals.item.custom.*;
 
 public class ModItems {
@@ -72,6 +74,15 @@ public class ModItems {
   public static final RegistryObject<Item> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor",
           () -> new AnimalArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                   false, new Item.Properties().stacksTo(1)));
+
+  public static final RegistryObject<Item> MOONSTONE_BOW = ITEMS.register("moonstone_bow",
+          () -> new BowItem(new Item.Properties().durability(500)));
+
+  public static final RegistryObject<Item> GARLIC_SEEDS = ITEMS.register("garlic_seeds",
+          () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), new Item.Properties()));
+
+  public static final RegistryObject<Item> SNOWBERRIES = ITEMS.register("snowberries",
+          () -> new ItemNameBlockItem(ModBlocks.SNOWBERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.SNOWBERRIES)));
 
 
 

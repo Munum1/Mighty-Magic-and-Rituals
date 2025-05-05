@@ -13,8 +13,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
 import net.munum.magicnrituals.block.custom.AltarBlock;
+import net.munum.magicnrituals.block.custom.GarlicCropBlock;
 import net.munum.magicnrituals.block.custom.RubyLampBlock;
+import net.munum.magicnrituals.block.custom.SnowBerryBushBlock;
 import net.munum.magicnrituals.item.ModItems;
+import net.munum.magicnrituals.sound.ModSounds;
+
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -56,7 +60,7 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> ALTAR_BLOCK = registerBlock("altar_block",
-            () -> new AltarBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+            () -> new AltarBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(ModSounds.ALTAR_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
             () -> new AltarBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.LARGE_AMETHYST_BUD)));
@@ -88,6 +92,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RUBY_LAMP = registerBlock("ruby_lamp",
             () -> new RubyLampBlock(BlockBehaviour.Properties.of().strength(3f).lightLevel(state -> state.getValue(RubyLampBlock.CLICKED) ? 15 : 0)));
+
+
+    public static final RegistryObject<Block> GARLIC_CROP =BLOCKS.register("garlic_crop",
+            () -> new GarlicCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> SNOWBERRY_BUSH = BLOCKS.register("snow_berry_bush",
+            () -> new SnowBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
 
