@@ -43,19 +43,33 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
-            () -> new DropExperienceBlock(UniformInt.of(2,3), BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ROSE_QUARTZ_ORE = registerBlock("rose_quartz_ore",
-            () -> new DropExperienceBlock(UniformInt.of(1,2), BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> RUBY_DEEPSLATE_ORE = registerBlock("ruby_deepslate_ore",
-            () -> new DropExperienceBlock(UniformInt.of(2,3), BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> ROSE_QUARTZ_DEEPSLATE_ORE = registerBlock("rose_quartz_deepslate_ore",
-            () -> new DropExperienceBlock(UniformInt.of(1,2), BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> ROSE_QUARTZ_NETHER_ORE = registerBlock("rose_quartz_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERRACK)));
+    public static final RegistryObject<Block> RUBY_NETHER_ORE = registerBlock("ruby_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.NETHERRACK)));
+
+    public static final RegistryObject<Block> ROSE_QUARTZ_END_ORE = registerBlock("rose_quartz_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RUBY_END_ORE = registerBlock("ruby_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
 
 
 

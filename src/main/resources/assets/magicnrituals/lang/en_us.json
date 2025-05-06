@@ -45,6 +45,12 @@
   "block.magicnrituals.ruby_deepslate_ore": "Ruby Deepslate Ore",
   "block.magicnrituals.rose_quartz_deepslate_ore": "Rose Quartz Deepslate Ore",
 
+  "block.magicnrituals.rose_quartz_nether_ore": "Rose Quartz Nether Ore",
+  "block.magicnrituals.rose_quartz_end_ore": "Rose Quartz End Ore",
+
+  "block.magicnrituals.ruby_nether_ore": "Ruby Nether Ore",
+  "block.magicnrituals.ruby_end_ore": "Ruby End Ore",
+
   "block.magicnrituals.altar_block": "Magic Altar",
 
   "block.magicnrituals.ruby_stairs": "Ruby Stairs",

@@ -47,11 +47,22 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RAW_RUBY.get()));
         this.add(ModBlocks.RUBY_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RAW_RUBY.get(),1,2));
+                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RAW_RUBY.get(),1,1));
         this.add(ModBlocks.ROSE_QUARTZ_ORE.get(),
                 block -> createOreDrop(ModBlocks.ROSE_QUARTZ_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get()));
         this.add(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get(),1,2));
+                block -> createMultipleOreDrops(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get(),1,1));
+
+        this.add(ModBlocks.RUBY_NETHER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.RUBY_NETHER_ORE.get(), ModItems.RAW_RUBY.get(),1,1));
+        this.add(ModBlocks.ROSE_QUARTZ_NETHER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ROSE_QUARTZ_NETHER_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get(),1,1));
+
+        this.add(ModBlocks.RUBY_END_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.RUBY_ORE.get(), ModItems.RAW_RUBY.get(),1,2));
+        this.add(ModBlocks.ROSE_QUARTZ_END_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ROSE_QUARTZ_END_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get(),1,2));
+
 
 
         dropSelf(ModBlocks.RUBY_STAIRS.get());

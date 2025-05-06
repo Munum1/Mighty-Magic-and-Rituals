@@ -36,7 +36,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.RUBY_ORE);
+        blockWithItem(ModBlocks.RUBY_NETHER_ORE);
+        blockWithItem(ModBlocks.RUBY_END_ORE);
         blockWithItem(ModBlocks.ROSE_QUARTZ_ORE);
+        blockWithItem(ModBlocks.ROSE_QUARTZ_NETHER_ORE);
+        blockWithItem(ModBlocks.ROSE_QUARTZ_END_ORE);
+
+
         blockWithItem(ModBlocks.ALTAR_BLOCK);
 
         blockWithItem(ModBlocks.MOONSTONE_BLOCK);
