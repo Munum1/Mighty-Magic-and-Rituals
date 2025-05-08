@@ -47,9 +47,15 @@ public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHe
         @Override
         protected void registerModels() {
             basicItem(ModItems.RUBY.get());
+            basicItem(ModItems.AETHERIUM.get());
             basicItem(ModItems.ROSE_QUARTZ.get());
+            basicItem(ModItems.SOULSTEEL.get());
+            basicItem(ModItems.LUMINITITE.get());
             basicItem(ModItems.RAW_ROSE_QUARTZ.get());
             basicItem(ModItems.RAW_RUBY.get());
+            basicItem(ModItems.RAW_AETHERIUM.get());
+            basicItem(ModItems.RAW_SOULSTEEL.get());
+            basicItem(ModItems.RAW_LUMINITITE.get());
 
             //basicItem(ModItems.CHISEL.get());
 

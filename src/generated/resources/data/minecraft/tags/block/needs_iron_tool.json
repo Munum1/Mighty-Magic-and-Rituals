@@ -1,6 +1,9 @@
 {
   "values": [
     "magicnrituals:ruby_deepslate_ore",
-    "magicnrituals:rose_quartz_deepslate_ore"
+    "magicnrituals:aetherium_deepslate_ore",
+    "magicnrituals:rose_quartz_deepslate_ore",
+    "magicnrituals:soulsteel_deepslate_ore",
+    "magicnrituals:luminitite_deepslate_ore"
   ]
 }

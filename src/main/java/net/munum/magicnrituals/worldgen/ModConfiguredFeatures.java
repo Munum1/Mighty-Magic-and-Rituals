@@ -20,6 +20,9 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_RUBY_ORE_KEY = registerKey("ruby_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_LUMINITITE_ORE_KEY = registerKey("luminitite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_AETHERIUM_ORE_KEY = registerKey("aetherium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SOULSTEEL_ORE_KEY = registerKey("soulsteel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ROSE_QUARTZ_ORE_KEY = registerKey("rose_quartz_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RUBY_ORE_KEY = registerKey("nether_ruby_ore");
@@ -42,7 +45,28 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceables, ModBlocks.ROSE_QUARTZ_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get().defaultBlockState()));
 
+        List<OreConfiguration.TargetBlockState> overworldLuminititeOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.LUMINITITE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.LUMINITITE_DEEPSLATE_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> overworldAetheriumOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.AETHERIUM_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.AETHERIUM_DEEPSLATE_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> overworldSoulsteelOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.SOULSTEEL_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.SOULSTEEL_DEEPSLATE_ORE.get().defaultBlockState()));
+
+
+
+
+
+
+
         register(context,OVERWORLD_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldModOres, 9));
+        register(context,OVERWORLD_LUMINITITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldLuminititeOres, 9));
+        register(context,OVERWORLD_AETHERIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAetheriumOres, 9));
+        register(context,OVERWORLD_SOULSTEEL_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSoulsteelOres, 9));
         register(context,OVERWORLD_ROSE_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRoseQuartzOres, 9));
 
         register(context,NETHER_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,

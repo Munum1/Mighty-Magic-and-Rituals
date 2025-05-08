@@ -16,6 +16,9 @@ import net.munum.magicnrituals.MagicnRituals;
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_RUBY_ORE_KEY = registerKey("add_ruby_ore");
     public static final ResourceKey<BiomeModifier> ADD_ROSE_QUARTZ_ORE_KEY = registerKey("add_rose_quartz_ore");
+    public static final ResourceKey<BiomeModifier> ADD_LUMINITITE_ORE_KEY = registerKey("add_luminitite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_AETHERIUM_ORE_KEY = registerKey("add_aetherium_ore");
+    public static final ResourceKey<BiomeModifier> ADD_SOULSTEEL_ORE_KEY = registerKey("add_soulsteel_ore");
 
     public static final ResourceKey<BiomeModifier> ADD_NETHER_RUBY_ORE_KEY = registerKey("add_nether_ruby_ore");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_ROSE_QUARTZ_ORE_KEY = registerKey("add_nether_rose_quartz_ore");
@@ -31,6 +34,20 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.RUBY_ORE_PLACED_KEY)),
                         GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_LUMINITITE_ORE_KEY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.LUMINITITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(ADD_AETHERIUM_ORE_KEY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.AETHERIUM_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(ADD_SOULSTEEL_ORE_KEY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.SOULSTEEL_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
         context.register(ADD_ROSE_QUARTZ_ORE_KEY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ROSE_QUARTZ_ORE_PLACED_KEY)),

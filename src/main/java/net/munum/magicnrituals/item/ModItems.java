@@ -16,15 +16,29 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_RUBY = ITEMS.register("raw_ruby",
             () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ROSE_QUARTZ = ITEMS.register("rose_quartz",
             () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> RAW_ROSE_QUARTZ = ITEMS.register("raw_rose_quartz",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_AETHERIUM = ITEMS.register("raw_aetherium",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AETHERIUM = ITEMS.register("aetherium_ingot",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_SOULSTEEL = ITEMS.register("raw_soulsteel",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SOULSTEEL = ITEMS.register("soulsteel_ingot",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> LUMINITITE = ITEMS.register("luminitite_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_LUMINITITE = ITEMS.register("raw_luminitite",
+            () -> new Item(new Item.Properties()));
+
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));

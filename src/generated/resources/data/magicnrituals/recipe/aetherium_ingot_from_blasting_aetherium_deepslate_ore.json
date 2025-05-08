@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "aetherium",
+  "ingredient": {
+    "item": "magicnrituals:aetherium_deepslate_ore"
+  },
+  "result": {
+    "id": "magicnrituals:aetherium_ingot"
+  }
+}

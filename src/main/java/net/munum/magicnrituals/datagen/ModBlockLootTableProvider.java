@@ -42,12 +42,27 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_ROSE_QUARTZ_BLOCK.get());
         dropSelf(ModBlocks.ALTAR_BLOCK.get());
         dropSelf(ModBlocks.MOONSTONE_BLOCK.get());
+        dropSelf(ModBlocks.SOULSTEEL_BLOCK.get());
+        dropSelf(ModBlocks.AETHERIUM_BLOCK.get());
+        dropSelf(ModBlocks.LUMINITITE_BLOCK.get());
 
 
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RAW_RUBY.get()));
+        this.add(ModBlocks.LUMINITITE_ORE.get(),
+                block -> createOreDrop(ModBlocks.LUMINITITE_ORE.get(), ModItems.RAW_LUMINITITE.get()));
+        this.add(ModBlocks.SOULSTEEL_ORE.get(),
+                block -> createOreDrop(ModBlocks.SOULSTEEL_ORE.get(), ModItems.RAW_SOULSTEEL.get()));
+        this.add(ModBlocks.AETHERIUM_ORE.get(),
+                block -> createOreDrop(ModBlocks.AETHERIUM_ORE.get(), ModItems.RAW_AETHERIUM.get()));
         this.add(ModBlocks.RUBY_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RAW_RUBY.get(),1,1));
+        this.add(ModBlocks.LUMINITITE_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.LUMINITITE_DEEPSLATE_ORE.get(), ModItems.RAW_LUMINITITE.get(),1,1));
+        this.add(ModBlocks.SOULSTEEL_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.SOULSTEEL_DEEPSLATE_ORE.get(), ModItems.RAW_SOULSTEEL.get(),1,1));
+        this.add(ModBlocks.AETHERIUM_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.AETHERIUM_DEEPSLATE_ORE.get(), ModItems.RAW_AETHERIUM.get(),1,1));
         this.add(ModBlocks.ROSE_QUARTZ_ORE.get(),
                 block -> createOreDrop(ModBlocks.ROSE_QUARTZ_ORE.get(), ModItems.RAW_ROSE_QUARTZ.get()));
         this.add(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get(),

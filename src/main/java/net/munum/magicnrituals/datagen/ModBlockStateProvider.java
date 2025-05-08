@@ -30,17 +30,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.ROSE_QUARTZ_BLOCK);
+        blockWithItem(ModBlocks.AETHERIUM_BLOCK);
+        blockWithItem(ModBlocks.LUMINITITE_BLOCK);
         blockWithItem(ModBlocks.RAW_RUBY_BLOCK);
         blockWithItem(ModBlocks.RAW_ROSE_QUARTZ_BLOCK);
+        blockWithItem(ModBlocks.SOULSTEEL_BLOCK);
 
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.LUMINITITE_ORE);
+        blockWithItem(ModBlocks.SOULSTEEL_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.LUMINITITE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.RUBY_ORE);
+        blockWithItem(ModBlocks.SOULSTEEL_ORE);
         blockWithItem(ModBlocks.RUBY_NETHER_ORE);
         blockWithItem(ModBlocks.RUBY_END_ORE);
         blockWithItem(ModBlocks.ROSE_QUARTZ_ORE);
         blockWithItem(ModBlocks.ROSE_QUARTZ_NETHER_ORE);
         blockWithItem(ModBlocks.ROSE_QUARTZ_END_ORE);
+        blockWithItem(ModBlocks.AETHERIUM_ORE);
+        blockWithItem(ModBlocks.AETHERIUM_DEEPSLATE_ORE);
 
 
         blockWithItem(ModBlocks.ALTAR_BLOCK);

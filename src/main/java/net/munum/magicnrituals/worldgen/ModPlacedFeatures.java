@@ -17,6 +17,9 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
+    public static final ResourceKey<PlacedFeature> LUMINITITE_ORE_PLACED_KEY = registerKey("luminitite_ore_placed");
+    public static final ResourceKey<PlacedFeature> AETHERIUM_ORE_PLACED_KEY = registerKey("aetherium_ore_placed");
+    public static final ResourceKey<PlacedFeature> SOULSTEEL_ORE_PLACED_KEY = registerKey("soulsteel_ore_placed");
     public static final ResourceKey<PlacedFeature> ROSE_QUARTZ_ORE_PLACED_KEY = registerKey("rose_quartz_ore_placed");
 
     public static final ResourceKey<PlacedFeature> NETHER_RUBY_ORE_PLACED_KEY = registerKey("nether_ruby_ore_placed");
@@ -39,6 +42,16 @@ public class ModPlacedFeatures {
         register(context, ROSE_QUARTZ_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_ROSE_QUARTZ_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(12, // veins per chunk));
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)))); // height range
+        register(context, LUMINITITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_LUMINITITE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12, // veins per chunk));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)))); // height range
+        register(context, AETHERIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_AETHERIUM_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12, // veins per chunk));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)))); // height range
+        register(context, SOULSTEEL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_SOULSTEEL_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12, // veins per chunk));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)))); // height range
+
 
 
         register(context, NETHER_RUBY_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),

@@ -27,6 +27,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> ROSE_QUARTZ_SMELTABLES = List.of(ModItems.RAW_ROSE_QUARTZ.get(),
                 ModBlocks.ROSE_QUARTZ_ORE.get(), ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get());
 
+        List<ItemLike> AETHERIUM_SMELTABLES = List.of(ModItems.RAW_AETHERIUM.get(),
+                ModBlocks.AETHERIUM_ORE.get(), ModBlocks.AETHERIUM_DEEPSLATE_ORE.get());
+
+        List<ItemLike> SOULSTEEL_SMELTABLES = List.of(ModItems.RAW_SOULSTEEL.get(),
+                ModBlocks.SOULSTEEL_ORE.get(), ModBlocks.SOULSTEEL_DEEPSLATE_ORE.get());
+
+        List<ItemLike> LUMINITITE_SMELTABLES = List.of(ModItems.RAW_LUMINITITE.get(),
+                ModBlocks.LUMINITITE_ORE.get(), ModBlocks.LUMINITITE_DEEPSLATE_ORE.get());
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
                 .pattern("AAA")
@@ -34,6 +43,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A' , ModItems.RUBY.get())
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AETHERIUM_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A' , ModItems.AETHERIUM.get())
+                .unlockedBy(getHasName(ModItems.AETHERIUM.get()), has(ModItems.AETHERIUM.get())).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOULSTEEL_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A' , ModItems.SOULSTEEL.get())
+                .unlockedBy(getHasName(ModItems.SOULSTEEL.get()), has(ModItems.SOULSTEEL.get())).save(pRecipeOutput );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LUMINITITE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A' , ModItems.LUMINITITE.get())
+                .unlockedBy(getHasName(ModItems.LUMINITITE.get()), has(ModItems.LUMINITITE.get())).save(pRecipeOutput );
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RUBY_SWORD.get())
                 .pattern(" A ")
@@ -157,6 +187,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RUBY_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()),has(ModBlocks.RUBY_BLOCK.get())).save(pRecipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.AETHERIUM.get(), 9)
+                .requires(ModBlocks.AETHERIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.AETHERIUM_BLOCK.get()),has(ModBlocks.AETHERIUM_BLOCK.get())).save(pRecipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.GARLIC_BREAD.get(), 1)
                 .requires(ModItems.GARLIC.get())
                 .requires(Items.BREAD)
@@ -168,8 +202,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModItems.CHISEL.get()), has(ModItems.CHISEL.get())).save(pRecipeOutput);
 
         oreSmelting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,200,"ruby");
+        oreSmelting(pRecipeOutput, SOULSTEEL_SMELTABLES, RecipeCategory.MISC, ModItems.SOULSTEEL.get(),0.25f,200,"soulsteel");
         oreSmelting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_QUARTZ.get(),0.25f,200,"rose_quartz");
+        oreSmelting(pRecipeOutput, AETHERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.AETHERIUM.get(),0.25f,200,"aetherium");
+        oreSmelting(pRecipeOutput, LUMINITITE_SMELTABLES, RecipeCategory.MISC, ModItems.LUMINITITE.get(),0.25f,200,"luminitite");
+        oreBlasting(pRecipeOutput, SOULSTEEL_SMELTABLES, RecipeCategory.MISC, ModItems.SOULSTEEL.get(),0.25f,100,"soulsteel");
         oreBlasting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,100,"ruby");
+        oreBlasting(pRecipeOutput, AETHERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.AETHERIUM.get(),0.25f,100,"aetherium");
         oreBlasting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_QUARTZ.get(),0.25f,100,"rose_quartz");
 
         stairBuilder(ModBlocks.RUBY_STAIRS.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")

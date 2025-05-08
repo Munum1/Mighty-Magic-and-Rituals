@@ -32,6 +32,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROSE_QUARTZ_BLOCK = registerBlock("rose_quartz_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> AETHERIUM_BLOCK = registerBlock("aetherium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> SOULSTEEL_BLOCK = registerBlock("soulsteel_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> LUMINITITE_BLOCK = registerBlock("luminitite_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
 
     public static final RegistryObject<Block> RAW_RUBY_BLOCK = registerBlock("raw_ruby_block",
@@ -42,18 +51,36 @@ public class ModBlocks {
                     .strength(3f).requiresCorrectToolForDrops()));
 
 
+
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
             () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ROSE_QUARTZ_ORE = registerBlock("rose_quartz_ore",
             () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
-
+    public static final RegistryObject<Block> AETHERIUM_ORE = registerBlock("aetherium_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SOULSTEEL_ORE = registerBlock("soulsteel_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LUMINITITE_ORE = registerBlock("luminitite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RUBY_DEEPSLATE_ORE = registerBlock("ruby_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> LUMINITITE_DEEPSLATE_ORE = registerBlock("luminitite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> ROSE_QUARTZ_DEEPSLATE_ORE = registerBlock("rose_quartz_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> AETHERIUM_DEEPSLATE_ORE = registerBlock("aetherium_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> SOULSTEEL_DEEPSLATE_ORE = registerBlock("soulsteel_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
@@ -70,6 +97,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_END_ORE = registerBlock("ruby_end_ore",
             () -> new DropExperienceBlock(UniformInt.of(1,1), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
+
+
+
+
 
 
 

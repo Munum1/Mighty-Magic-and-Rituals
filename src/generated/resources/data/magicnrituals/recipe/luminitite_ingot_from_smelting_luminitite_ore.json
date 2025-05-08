@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "luminitite",
+  "ingredient": {
+    "item": "magicnrituals:luminitite_ore"
+  },
+  "result": {
+    "id": "magicnrituals:luminitite_ingot"
+  }
+}

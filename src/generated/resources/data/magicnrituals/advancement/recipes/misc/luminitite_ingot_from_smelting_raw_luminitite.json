@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_luminitite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "magicnrituals:raw_luminitite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "magicnrituals:luminitite_ingot_from_smelting_raw_luminitite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_luminitite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "magicnrituals:luminitite_ingot_from_smelting_raw_luminitite"
+    ]
+  }
+}

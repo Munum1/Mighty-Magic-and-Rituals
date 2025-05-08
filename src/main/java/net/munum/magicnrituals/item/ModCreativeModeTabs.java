@@ -27,6 +27,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GARLIC.get());
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.MOONSTONE.get());
+                        output.accept(ModItems.LUMINITITE.get());
+                        output.accept(ModItems.RAW_LUMINITITE.get());
+                        output.accept(ModItems.AETHERIUM.get());
+                        output.accept(ModItems.RAW_AETHERIUM.get());
+                        output.accept(ModItems.SOULSTEEL.get());
+                        output.accept(ModItems.RAW_SOULSTEEL.get());
 
                         output.accept(ModItems.RUBY_SWORD.get());
                         output.accept(ModItems.RUBY_PICKAXE.get());
@@ -58,6 +64,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.magicnrituals.magic_and_rituals_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.RUBY_BLOCK.get());
+                        output.accept(ModBlocks.AETHERIUM_BLOCK.get());
+                        output.accept(ModBlocks.LUMINITITE_BLOCK.get());
+                        output.accept(ModBlocks.SOULSTEEL_BLOCK.get());
                         output.accept(ModBlocks.ROSE_QUARTZ_BLOCK.get());
                         output.accept(ModBlocks.RAW_RUBY_BLOCK.get());
                         output.accept(ModBlocks.RAW_ROSE_QUARTZ_BLOCK.get());

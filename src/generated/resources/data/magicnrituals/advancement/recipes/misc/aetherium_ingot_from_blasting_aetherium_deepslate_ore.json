@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aetherium_deepslate_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "magicnrituals:aetherium_deepslate_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "magicnrituals:aetherium_ingot_from_blasting_aetherium_deepslate_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aetherium_deepslate_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "magicnrituals:aetherium_ingot_from_blasting_aetherium_deepslate_ore"
+    ]
+  }
+}

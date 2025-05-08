@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "aetherium",
+  "ingredient": {
+    "item": "magicnrituals:raw_aetherium"
+  },
+  "result": {
+    "id": "magicnrituals:aetherium_ingot"
+  }
+}

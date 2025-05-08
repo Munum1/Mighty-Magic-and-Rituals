@@ -1,10 +1,15 @@
-// 1.21.1	2025-05-05T18:51:40.6150425	Item Models: magicnrituals
+// 1.21.1	2025-05-08T16:13:13.2261265	Item Models: magicnrituals
+845d255f40a4f3e408b6da1508549f638334ba0c assets/magicnrituals/models/item/aetherium_ingot.json
 c917524f5b4aeb3ada03ea989ec63e9adb125ec4 assets/magicnrituals/models/item/garlic.json
 7e65fc1cd7442bf7a4154b31480b8e40b05c7202 assets/magicnrituals/models/item/garlic_bread.json
 6ad24409e297574ef6170af1031802b579c90a0b assets/magicnrituals/models/item/garlic_seeds.json
+a8dcdd6e90a8484a57839c948fed56b0258c7759 assets/magicnrituals/models/item/luminitite_ingot.json
 d6038b0eadc443b26ac7e12c0542eeafed8d9bc4 assets/magicnrituals/models/item/moonstone.json
+3b7c74a6aed4f84eb704161fd3407e1153655f7d assets/magicnrituals/models/item/raw_aetherium.json
+9b0f67ff1d48e613ef5bf0df711fec319862fb9e assets/magicnrituals/models/item/raw_luminitite.json
 939e34e9c50214eb9cf0d010ea3c4576951bdcf6 assets/magicnrituals/models/item/raw_rose_quartz.json
 73b6c76dca809cc8cc83ffc431fe30244c716b92 assets/magicnrituals/models/item/raw_ruby.json
+1a54de8965113b82d77752a8c833c7bbc2e53914 assets/magicnrituals/models/item/raw_soulsteel.json
 8c40d7e4eac802080bd7f59d8ce67fa54824ac8d assets/magicnrituals/models/item/rose_quartz.json
 4136dc5e585caac4e8622e797948d41575ea42bd assets/magicnrituals/models/item/ruby.json
 aa9b9480fd3217fca739e5840c256bca83a4b636 assets/magicnrituals/models/item/ruby_axe.json
@@ -63,3 +68,4 @@ ecebd257b9db4adf38d235f19b713b5d91eac05f assets/magicnrituals/models/item/ruby_l
 80fd3b4b048b36e0ba1800560ae9880fc91173f0 assets/magicnrituals/models/item/ruby_sword.json
 6139237465c55422f821ccf7aef43ceffedcc031 assets/magicnrituals/models/item/ruby_wall.json
 2458abaa0e09156d6a36e6f08626b3856d54e87b assets/magicnrituals/models/item/snowberries.json
+a74351ffda048bf77cfba97a34d69ccd7a62d2f4 assets/magicnrituals/models/item/soulsteel_ingot.json
