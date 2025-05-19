@@ -1,10 +1,14 @@
 package net.munum.magicnrituals.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,12 +16,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
-import net.munum.magicnrituals.block.custom.AltarBlock;
-import net.munum.magicnrituals.block.custom.GarlicCropBlock;
-import net.munum.magicnrituals.block.custom.RubyLampBlock;
-import net.munum.magicnrituals.block.custom.SnowBerryBushBlock;
+import net.munum.magicnrituals.block.custom.*;
+import net.munum.magicnrituals.fluid.ModFluids;
 import net.munum.magicnrituals.item.ModItems;
 import net.munum.magicnrituals.sound.ModSounds;
+import net.munum.magicnrituals.worldgen.tree.ModTreeGrowers;
 
 import java.util.function.Supplier;
 
@@ -144,6 +147,66 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SNOWBERRY_BUSH = BLOCKS.register("snow_berry_bush",
             () -> new SnowBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+
+    public static final RegistryObject<RotatedPillarBlock> BLACKTHORN_LOG = registerBlock("blackthorn_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> BLACKTHORN_WOOD = registerBlock("blackthorn_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_BLACKTHORN_LOG = registerBlock("stripped_blackthorn_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_BLACKTHORN_WOOD = registerBlock("stripped_blackthorn_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> BLACKTHORN_PLANKS = registerBlock("blackthorn_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
+    public static final RegistryObject<Block> BLACKTHORN_LEAVES = registerBlock("blackthorn_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final RegistryObject<SaplingBlock> BLACKTHORN_SAPLING = registerBlock("blackthorn_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.BLACKTHORN, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<LiquidBlock> LIQUID_MOONSTONE_BLOCK = BLOCKS.register("liquid_moonstone_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_LIQUID_MOONSTONE, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)));
+
+    public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
+    public static final RegistryObject<Block> GROWTH_CHAMBER = registerBlock("growth_chamber",
+            () -> new GrowthChamberBlock(BlockBehaviour.Properties.of()));
+
+
+
 
 
 

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "magicnrituals:block/stripped_blackthorn_log_top",
+    "side": "magicnrituals:block/stripped_blackthorn_log"
+  }
+}

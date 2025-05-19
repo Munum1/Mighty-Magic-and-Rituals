@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -63,6 +64,8 @@ public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHe
             basicItem(ModItems.GARLIC_BREAD.get());
 
             basicItem(ModItems.MOONSTONE.get());
+            basicItem(ModItems.ARCANE_CIRCUIT.get());
+            basicItem(ModItems.MOONSTONE_DUST.get());
 
             buttonItem(ModBlocks.RUBY_BUTTON, ModBlocks.RUBY_BLOCK);
             fenceItem(ModBlocks.RUBY_FENCE, ModBlocks.RUBY_BLOCK);
@@ -86,8 +89,22 @@ public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHe
 
             basicItem(ModItems.GARLIC_SEEDS.get());
             basicItem(ModItems.SNOWBERRIES.get());
+            basicItem(ModItems.SLOE_FRUIT.get());
+
+            saplingItem(ModBlocks.BLACKTHORN_SAPLING);
+
+            withExistingParent(ModItems.WISP_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
 
         }
+
+
+private ItemModelBuilder saplingItem(RegistryObject<SaplingBlock> item) {
+    return withExistingParent(item.getId().getPath(),
+        ResourceLocation.parse("item/generated")).texture("layer0",
+        ResourceLocation.fromNamespaceAndPath(MagicnRituals.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
 
 private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
         final String MOD_ID = MagicnRituals.MOD_ID; // Change this to your mod id

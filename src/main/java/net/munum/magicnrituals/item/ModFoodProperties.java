@@ -14,5 +14,8 @@ public class ModFoodProperties {
     public static final FoodProperties SNOWBERRIES = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2f)
             .saturationModifier(0.15f).fast().build();
 
+    public static final FoodProperties SLOE_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2f)
+            .saturationModifier(0.15f).fast().build();
+
 }
 

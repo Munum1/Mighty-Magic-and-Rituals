@@ -2,12 +2,15 @@ package net.munum.magicnrituals.item;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.munum.magicnrituals.MagicnRituals;
 import net.munum.magicnrituals.block.ModBlocks;
+import net.munum.magicnrituals.entity.ModEntities;
+import net.munum.magicnrituals.fluid.ModFluids;
 import net.munum.magicnrituals.item.custom.*;
 
 public class ModItems {
@@ -97,6 +100,22 @@ public class ModItems {
 
   public static final RegistryObject<Item> SNOWBERRIES = ITEMS.register("snowberries",
           () -> new ItemNameBlockItem(ModBlocks.SNOWBERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.SNOWBERRIES)));
+
+  public static final RegistryObject<Item> SLOE_FRUIT = ITEMS.register("sloe_fruit",
+          () -> new Item(new Item.Properties().food(ModFoodProperties.SLOE_FRUIT)));
+
+  public static final RegistryObject<Item> WISP_SPAWN_EGG = ITEMS.register("wisp_spawn_egg",
+          () -> new ForgeSpawnEggItem(ModEntities.WISP, 0xA0D8E6, 0xF2F2F2, new Item.Properties()));
+
+  public static final RegistryObject<Item> LIQUID_MOONSTONE_BUCKET = ITEMS.register("liquid_moonstone_bucket",
+          () -> new BucketItem(ModFluids.SOURCE_LIQUID_MOONSTONE, new Item.Properties().stacksTo(1)));
+
+  public static final RegistryObject<Item> ARCANE_CIRCUIT = ITEMS.register("arcane_circuit",
+          () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MOONSTONE_DUST = ITEMS.register("moonstone_dust",
+            () -> new Item(new Item.Properties()));
+
 
 
 

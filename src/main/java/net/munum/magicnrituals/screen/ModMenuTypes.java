@@ -1,0 +1,29 @@
+package net.munum.magicnrituals.screen;
+
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraftforge.common.extensions.IForgeMenuType;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+import net.munum.magicnrituals.MagicnRituals;
+import net.munum.magicnrituals.screen.custom.GrowthChamberMenu;
+import net.munum.magicnrituals.screen.custom.PedestalMenu;
+
+public class ModMenuTypes {
+    public static final DeferredRegister<MenuType<?>> MENUS =
+            DeferredRegister.create(Registries.MENU, MagicnRituals.MOD_ID);
+
+
+    public static final RegistryObject<MenuType<PedestalMenu>> PEDESTAL_MENU =
+            MENUS.register("pedestal_menu", () -> IForgeMenuType.create(PedestalMenu::new));
+
+    public static final RegistryObject<MenuType<GrowthChamberMenu>> GROWTH_CHAMBER_MENU =
+            MENUS.register("growth_chamber_menu", () -> IForgeMenuType.create(GrowthChamberMenu::new));
+
+
+
+    public static void register(IEventBus eventBus) {
+        MENUS.register(eventBus);
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "luminitite",
+  "ingredient": {
+    "item": "magicnrituals:raw_rose_quartz"
+  },
+  "result": {
+    "id": "magicnrituals:luminitite_ingot"
+  }
+}

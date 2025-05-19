@@ -2,10 +2,7 @@ package net.munum.magicnrituals.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.ButtonBlock;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -80,6 +77,40 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCrop(((CropBlock) ModBlocks.GARLIC_CROP.get()), "garlic_crop_stage", "garlic_crop_stage_");
         makeBush(((SweetBerryBushBlock) ModBlocks.SNOWBERRY_BUSH.get()), "snowberry_bush_stage", "snowberry_bush_stage");
+
+        logBlock(ModBlocks.BLACKTHORN_LOG.get());
+        axisBlock(ModBlocks.BLACKTHORN_WOOD.get(), blockTexture(ModBlocks.BLACKTHORN_LOG.get()), blockTexture(ModBlocks.BLACKTHORN_LOG.get()));
+        logBlock(ModBlocks.STRIPPED_BLACKTHORN_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_BLACKTHORN_WOOD.get(), blockTexture(ModBlocks.STRIPPED_BLACKTHORN_LOG.get()), blockTexture(ModBlocks.STRIPPED_BLACKTHORN_LOG.get()));
+
+        blockItem(ModBlocks.BLACKTHORN_LOG);
+        blockItem(ModBlocks.BLACKTHORN_WOOD);
+        blockItem(ModBlocks.STRIPPED_BLACKTHORN_LOG);
+        blockItem(ModBlocks.STRIPPED_BLACKTHORN_WOOD);
+
+        blockWithItem(ModBlocks.BLACKTHORN_PLANKS);
+        blockWithItem(ModBlocks.GROWTH_CHAMBER);
+
+
+
+        leavesBlock(ModBlocks.BLACKTHORN_LEAVES);
+        saplingBlock(ModBlocks.BLACKTHORN_SAPLING);
+
+
+
+
+    }
+
+
+    private void saplingBlock(RegistryObject<SaplingBlock> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
@@ -150,5 +181,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("magicnrituals:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
+
+
+
+
+
 }
 

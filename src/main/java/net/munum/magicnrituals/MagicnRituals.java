@@ -1,10 +1,14 @@
 package net.munum.magicnrituals;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -16,13 +20,23 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.munum.magicnrituals.block.ModBlocks;
+import net.munum.magicnrituals.block.entity.ModBlockEntities;
+import net.munum.magicnrituals.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.munum.magicnrituals.component.ModDataComponentTypes;
 import net.munum.magicnrituals.effect.ModEffects;
+import net.munum.magicnrituals.entity.ModEntities;
+import net.munum.magicnrituals.entity.client.WispRenderer;
+import net.munum.magicnrituals.fluid.ModFluidTypes;
+import net.munum.magicnrituals.fluid.ModFluids;
 import net.munum.magicnrituals.item.ModCreativeModeTabs;
 import net.munum.magicnrituals.item.ModItems;
 import net.munum.magicnrituals.potion.ModPotions;
+import net.munum.magicnrituals.screen.ModMenuTypes;
+import net.munum.magicnrituals.screen.custom.GrowthChamberScreen;
+import net.munum.magicnrituals.screen.custom.PedestalScreen;
 import net.munum.magicnrituals.sound.ModSounds;
 import net.munum.magicnrituals.util.ModItemProperties;
+import net.munum.magicnrituals.villager.ModVillagers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -52,6 +66,22 @@ public class MagicnRituals {
 
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+
+
+        ModEntities.register(modEventBus);
+
+
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
+
+
+
+
 
 
         // Register the item to a creative tab
@@ -108,6 +138,19 @@ public class MagicnRituals {
         public static void onClientSetup(FMLClientSetupEvent event) {
             ModItemProperties.addCustomItemProperties();
 
+            EntityRenderers.register(ModEntities.WISP.get(), WispRenderer::new);
+
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_LIQUID_MOONSTONE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_LIQUID_MOONSTONE.get(), RenderType.translucent());
+
+            MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+            MenuScreens.register(ModMenuTypes.GROWTH_CHAMBER_MENU.get(), GrowthChamberScreen::new);
+
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }

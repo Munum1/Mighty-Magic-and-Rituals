@@ -62,5 +62,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_RUBY_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
                 .remove(ModTags.Blocks.NEEDS_RUBY_TOOL);
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.BLACKTHORN_LOG.get())
+                .add(ModBlocks.BLACKTHORN_WOOD.get())
+                .add(ModBlocks.STRIPPED_BLACKTHORN_LOG.get())
+                .add(ModBlocks.STRIPPED_BLACKTHORN_WOOD.get());
     }
 }

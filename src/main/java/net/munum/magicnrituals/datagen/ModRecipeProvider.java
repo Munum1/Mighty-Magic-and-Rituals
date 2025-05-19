@@ -183,6 +183,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.RUBY.get(), 9)
                 .requires(ModBlocks.RUBY_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()),has(ModBlocks.RUBY_BLOCK.get())).save(pRecipeOutput);
@@ -201,6 +202,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .requires(Items.STICK)
                         .unlockedBy(getHasName(ModItems.CHISEL.get()), has(ModItems.CHISEL.get())).save(pRecipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKTHORN_PLANKS.get(), 4)
+                .requires(ModBlocks.BLACKTHORN_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.BLACKTHORN_LOG.get()), has(ModBlocks.BLACKTHORN_LOG.get())).save(pRecipeOutput);
+
+
         oreSmelting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,200,"ruby");
         oreSmelting(pRecipeOutput, SOULSTEEL_SMELTABLES, RecipeCategory.MISC, ModItems.SOULSTEEL.get(),0.25f,200,"soulsteel");
         oreSmelting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_QUARTZ.get(),0.25f,200,"rose_quartz");
@@ -210,6 +216,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,100,"ruby");
         oreBlasting(pRecipeOutput, AETHERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.AETHERIUM.get(),0.25f,100,"aetherium");
         oreBlasting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_QUARTZ.get(),0.25f,100,"rose_quartz");
+        oreBlasting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.LUMINITITE.get(),0.25f,100,"luminitite");
 
         stairBuilder(ModBlocks.RUBY_STAIRS.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);

@@ -3,11 +3,13 @@ package net.munum.magicnrituals.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.munum.magicnrituals.MagicnRituals;
+import net.munum.magicnrituals.block.ModBlocks;
 import net.munum.magicnrituals.item.ModItems;
 import net.munum.magicnrituals.util.ModTags;
 import org.jetbrains.annotations.Nullable;
@@ -33,5 +35,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.RUBY_CHESTPLATE.get())
                 .add(ModItems.RUBY_LEGGINGS.get())
                 .add(ModItems.RUBY_BOOTS.get());
+
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.BLACKTHORN_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_BLACKTHORN_LOG.get().asItem())
+                .add(ModBlocks.BLACKTHORN_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_BLACKTHORN_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.BLACKTHORN_PLANKS.get().asItem());
+
     }
 }

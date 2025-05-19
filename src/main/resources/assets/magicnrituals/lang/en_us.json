@@ -14,7 +14,7 @@
   "item.magicnrituals.garlic": "Raw Garlic",
   "item.magicnrituals.garlic_bread": "Garlic Bread",
   "item.magicnrituals.moonstone": "Moonstone",
-  "item.magicnrituals.moonstone_block": "Block of Moonstone",
+
 
   "item.magicnrituals.ruby_sword": "Ruby Sword",
   "item.magicnrituals.ruby_pickaxe": "Ruby Pickaxe",
@@ -42,6 +42,15 @@
 
   "item.magicnrituals.ruby_horse_armor": "Ruby Horse Armor",
 
+  "item.magicnrituals.sloe_fruit": "Sloe Fruit",
+
+  "item.magicnrituals.moonstone_dust": "Moonstone Dust",
+
+  "item.magicnrituals.arcane_circuit": "Arcane Circuit",
+
+  "item.magicnrituals.liquid_moonstone_bucket": "Liquid Moonstone Bucket",
+
+
   "block.magicnrituals.ruby_block": "Ruby Block",
   "block.magicnrituals.luminitite_block": "Luminitite Block",
   "block.magicnrituals.soulsteel_block": "Soulsteel Block",
@@ -55,6 +64,7 @@
   "block.magicnrituals.soulsteel_ore": "Soulsteel Ore",
   "block.magicnrituals.rose_quartz_ore": "Rose Quartz Ore",
   "block.magicnrituals.ruby_deepslate_ore": "Ruby Deepslate Ore",
+  "block.magicnrituals.rose_quartz_deepslate_ore": "Rose Quartz Deepslate Ore",
   "block.magicnrituals.luminitite_deepslate_ore": "Luminitite Deepslate Ore",
   "block.magicnrituals.soulsteel_deepslate_ore": "Soulsteel Deepslate Ore",
   "block.magicnrituals.aetherium_deepslate_ore": "Aetherium Deepslate Ore",
@@ -66,6 +76,26 @@
   "block.magicnrituals.ruby_end_ore": "Ruby End Ore",
 
   "block.magicnrituals.altar_block": "Magic Altar",
+  "block.magicnrituals.arcane_furnace": "Arcane Furnace",
+
+  "block.magicnrituals.moonstone_block": "Block of Moonstone",
+
+  "block.magicnrituals.pedestal": "Stone Pedestal",
+  "block.magicnrituals.growth_chamber": "Growth Chamber",
+
+  "block.magicnrituals.blackthorn_log": "Blackthorn Log",
+  "block.magicnrituals.stripped_blackthorn_log": "Stripped Blackthorn Log",
+  "block.magicnrituals.blackthorn_wood": "Blackthorn Wood",
+  "block.magicnrituals.stripped_blackthorn_wood": "Stripped Blackthorn Wood",
+  "block.magicnrituals.blackthorn_planks": "Blackthorn Planks",
+  "block.magicnrituals.blackthorn_leaves": "Blackthorn Leaves",
+
+  "block.magicnrituals.sloe_fruit_block": "Sloe Fruit Block",
+
+  "item.magicnrituals.wisp_spawn_egg": "Wisp Spawn Egg",
+
+
+  "block.magicnrituals.blackthorn_sapling": "Blackthorn Sapling",
 
   "block.magicnrituals.ruby_stairs": "Ruby Stairs",
   "block.magicnrituals.ruby_slab": "Ruby Slab",
@@ -86,6 +116,8 @@
   "block.magicnrituals.snowberry_bush": "Snowberry Bush",
 
 
+
+
   "creativetab.magicnrituals.magic_and_rituals_items": "Mighty: Magic and Rituals Items",
   "creativetab.magicnrituals.magic_and_rituals_blocks": "Mighty: Magic and Rituals Blocks",
 
@@ -93,6 +125,10 @@
   "tooltip.magicnrituals.altar_block": "Press Shift for more information!",
 
   "tooltip.magicnrituals.chisel.shift_down": "This Item changes placed blocks.",
-  "tooltip.magicnrituals.chisel": "Press Shift for more information!"
+  "tooltip.magicnrituals.chisel": "Press Shift for more information!",
+
+  "entity.magicnrituals.wisp": "Wisp",
+
+  "entity.minecraft.villager.magicnrituals.astrologer": "Astrologer"
 
 }

@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:snowy_slopes",
+    "minecraft:taiga",
+    "minecraft:snowy_taiga"
+  ],
+  "features": "magicnrituals:snowberry_bush_placed",
+  "step": "vegetal_decoration"
+}

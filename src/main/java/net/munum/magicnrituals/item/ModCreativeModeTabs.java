@@ -53,6 +53,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GARLIC_SEEDS.get());
 
                         output.accept(ModItems.SNOWBERRIES.get());
+                        output.accept(ModItems.SLOE_FRUIT.get());
+                        output.accept(ModItems.ARCANE_CIRCUIT.get());
+                        output.accept(ModItems.MOONSTONE_DUST.get());
+
+                        output.accept(ModItems.WISP_SPAWN_EGG.get());
+                        output.accept(ModItems.LIQUID_MOONSTONE_BUCKET.get());
 
 
                         })
@@ -87,6 +93,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RUBY_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.RUBY_BUTTON.get());
                         output.accept(ModBlocks.RUBY_LAMP.get());
+
+                        output.accept(ModBlocks.BLACKTHORN_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_BLACKTHORN_LOG.get());
+                        output.accept(ModBlocks.BLACKTHORN_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_BLACKTHORN_WOOD.get());
+                        output.accept(ModBlocks.BLACKTHORN_PLANKS.get());
+                        output.accept(ModBlocks.BLACKTHORN_SAPLING.get());
+                        output.accept(ModBlocks.PEDESTAL.get());
+                        output.accept(ModBlocks.GROWTH_CHAMBER.get());
+
+
 
                         })
                             .build());

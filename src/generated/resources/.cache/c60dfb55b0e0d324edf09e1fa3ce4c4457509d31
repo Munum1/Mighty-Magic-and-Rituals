@@ -1,3 +1,5 @@
-// 1.21.1	2025-05-04T15:26:38.4121306	Tags for minecraft:item mod id magicnrituals
+// 1.21.1	2025-05-09T17:42:04.080999	Tags for minecraft:item mod id magicnrituals
 092d75843d0a78ddb30e8b3749236ccf48dbe6e3 data/magicnrituals/tags/item/transformable_items.json
+dd048fd4c91831fd458e9989fca924bf95068a7b data/minecraft/tags/item/logs_that_burn.json
+a25df2a2244520afe035de5940bc906f474f7475 data/minecraft/tags/item/planks.json
 805090c88bd7321f54e8dc6f66ea2a8d58fddddf data/minecraft/tags/item/trimmable_armor.json

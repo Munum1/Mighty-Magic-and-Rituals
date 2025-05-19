@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:forest",
+    "minecraft:flower_forest"
+  ],
+  "features": "magicnrituals:blackthorn_placed",
+  "step": "vegetal_decoration"
+}
