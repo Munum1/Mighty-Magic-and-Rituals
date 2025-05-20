@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "magicnrituals:soulsteel_ingot"
+    },
+    "B": {
+      "item": "minecraft:glass"
+    },
+    "C": {
+      "item": "magicnrituals:arcane_circuit"
+    },
+    "D": {
+      "item": "minecraft:smooth_stone"
+    },
+    "E": {
+      "item": "magicnrituals:moonstone_dust"
+    }
+  },
+  "pattern": [
+    "DED",
+    "BCB",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:growth_chamber"
+  }
+}

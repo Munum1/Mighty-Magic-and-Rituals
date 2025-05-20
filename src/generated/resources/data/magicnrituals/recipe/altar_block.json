@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stone"
+    },
+    "B": {
+      "item": "magicnrituals:ruby"
+    },
+    "C": {
+      "item": "magicnrituals:rose_quartz"
+    },
+    "D": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "pattern": [
+    " B ",
+    "ACA",
+    "ADA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:altar_block"
+  }
+}

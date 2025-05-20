@@ -22,10 +22,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
         List<ItemLike> RUBY_SMELTABLES = List.of(ModItems.RAW_RUBY.get(),
-                ModBlocks.RUBY_ORE.get(), ModBlocks.RUBY_DEEPSLATE_ORE.get());
+                ModBlocks.RUBY_ORE.get(), ModBlocks.RUBY_DEEPSLATE_ORE.get(),
+                ModBlocks.RUBY_NETHER_ORE.get(), ModBlocks.RUBY_END_ORE.get());
 
         List<ItemLike> ROSE_QUARTZ_SMELTABLES = List.of(ModItems.RAW_ROSE_QUARTZ.get(),
-                ModBlocks.ROSE_QUARTZ_ORE.get(), ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get());
+                ModBlocks.ROSE_QUARTZ_ORE.get(), ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get(),
+                ModBlocks.ROSE_QUARTZ_NETHER_ORE.get(), ModBlocks.ROSE_QUARTZ_END_ORE.get());
 
         List<ItemLike> AETHERIUM_SMELTABLES = List.of(ModItems.RAW_AETHERIUM.get(),
                 ModBlocks.AETHERIUM_ORE.get(), ModBlocks.AETHERIUM_DEEPSLATE_ORE.get());
@@ -178,10 +180,44 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.RUBY.get())
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALTAR_BLOCK.get())
+                .pattern(" B ")
+                .pattern("ACA")
+                .pattern("ADA")
+                .define('A', Items.STONE)
+                .define('B', ModItems.RUBY.get())
+                .define('C', ModItems.ROSE_QUARTZ.get())
+                .define('D', Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MOONSTONE_BOW.get())
+                .pattern(" BA")
+                .pattern("BCA")
+                .pattern(" BA")
+                .define('A', Items.STRING)
+                .define('B', Items.STICK)
+                .define('C', ModBlocks.MOONSTONE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.MOONSTONE.get()), has(ModItems.MOONSTONE.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ARCANE_CIRCUIT.get())
+                .pattern("AAC")
+                .pattern("ABC")
+                .pattern("AAC")
+                .define('A', ModItems.SOULSTEEL.get())
+                .define('B', Items.REDSTONE)
+                .define('C', Items.GOLD_NUGGET)
+                .unlockedBy(getHasName(ModItems.SOULSTEEL.get()), has(ModItems.SOULSTEEL.get())).save(pRecipeOutput);
 
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GROWTH_CHAMBER.get())
+                .pattern("DED")
+                .pattern("BCB")
+                .pattern("AAA")
+                .define('A', ModItems.SOULSTEEL.get())
+                .define('B', Items.GLASS)
+                .define('C', ModItems.ARCANE_CIRCUIT.get())
+                .define('D', Items.SMOOTH_STONE)
+                .define('E', ModItems.MOONSTONE_DUST.get())
+                .unlockedBy(getHasName(ModItems.SOULSTEEL.get()), has(ModItems.SOULSTEEL.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.RUBY.get(), 9)
@@ -216,7 +252,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(),0.25f,100,"ruby");
         oreBlasting(pRecipeOutput, AETHERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.AETHERIUM.get(),0.25f,100,"aetherium");
         oreBlasting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_QUARTZ.get(),0.25f,100,"rose_quartz");
-        oreBlasting(pRecipeOutput, ROSE_QUARTZ_SMELTABLES, RecipeCategory.MISC, ModItems.LUMINITITE.get(),0.25f,100,"luminitite");
+        oreBlasting(pRecipeOutput, LUMINITITE_SMELTABLES, RecipeCategory.MISC, ModItems.LUMINITITE.get(),0.25f,100,"luminitite");
 
         stairBuilder(ModBlocks.RUBY_STAIRS.get(), Ingredient.of(ModItems.RUBY.get())).group("ruby")
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get())).save(pRecipeOutput);

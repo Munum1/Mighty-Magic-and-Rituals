@@ -1,0 +1,9 @@
+{
+  "type": "magicnrituals:growth_chamber",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "result": {
+    "id": "minecraft:iron_ingot"
+  }
+}

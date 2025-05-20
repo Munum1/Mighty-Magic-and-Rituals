@@ -32,6 +32,7 @@
   "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.slimey_potion": "Slimey Arrow",
 
   "item.magicnrituals.garlic_seeds": "Garlic Seeds",
 
@@ -81,7 +82,7 @@
   "block.magicnrituals.moonstone_block": "Block of Moonstone",
 
   "block.magicnrituals.pedestal": "Stone Pedestal",
-  "block.magicnrituals.growth_chamber": "Growth Chamber",
+  "block.magicnrituals.growth_chamber": "Arcane Growth Chamber",
 
   "block.magicnrituals.blackthorn_log": "Blackthorn Log",
   "block.magicnrituals.stripped_blackthorn_log": "Stripped Blackthorn Log",
@@ -116,7 +117,7 @@
   "block.magicnrituals.snowberry_bush": "Snowberry Bush",
 
 
-
+  "fluid_type.magicnrituals.liquid_moonstone_fluid": "Liquid Moonstone",
 
   "creativetab.magicnrituals.magic_and_rituals_items": "Mighty: Magic and Rituals Items",
   "creativetab.magicnrituals.magic_and_rituals_blocks": "Mighty: Magic and Rituals Blocks",

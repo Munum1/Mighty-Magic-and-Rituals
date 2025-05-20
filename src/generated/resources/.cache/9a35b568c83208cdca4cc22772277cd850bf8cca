@@ -1,8 +1,7 @@
-// 1.21.1	2025-05-19T19:14:34.4277789	Block States: magicnrituals
+// 1.21.1	2025-05-20T16:14:52.8550271	Block States: magicnrituals
 ec13df0533fc98a54737c00ca05653003442eb8e assets/magicnrituals/blockstates/aetherium_block.json
 ccc3c44bbecf6f47b503a8bb80b13cb72335626d assets/magicnrituals/blockstates/aetherium_deepslate_ore.json
 eb957a2286c57f321e418f470d4a6c2ec3887c7e assets/magicnrituals/blockstates/aetherium_ore.json
-c0a32ec83d0012cb371fa6421a7a01a361ee6dd4 assets/magicnrituals/blockstates/altar_block.json
 5444966f4c4ec39a72badf9525cd31f7abe15ba6 assets/magicnrituals/blockstates/blackthorn_leaves.json
 0dc606b06946d83f65fe4cbf5185332d7a0ce704 assets/magicnrituals/blockstates/blackthorn_log.json
 5492d9d23f1fcc2a8c1502bfab36c972612345f1 assets/magicnrituals/blockstates/blackthorn_planks.json
@@ -45,7 +44,6 @@ b33dafbf859f8cdb99bc3527c12092ee974dbef2 assets/magicnrituals/blockstates/stripp
 8c5c6a5a5181da469651cfa970dc3bb24aac6ea0 assets/magicnrituals/models/block/aetherium_block.json
 e518828cbfb9ca94c48a0b96375980e4c86b905c assets/magicnrituals/models/block/aetherium_deepslate_ore.json
 82f1bc44fae3b923e0035bc8c2684c7b105eca9d assets/magicnrituals/models/block/aetherium_ore.json
-c49dc1614d73d078b96470ca1cb9dd620681c902 assets/magicnrituals/models/block/altar_block.json
 ab794d42313dbd7af00eeceb2621767a4655e774 assets/magicnrituals/models/block/blackthorn_leaves.json
 359b020513c164e1e05403854713929a7aed993f assets/magicnrituals/models/block/blackthorn_log.json
 6e77eefed9122ec71deb2e2c404adf86f21e6f3d assets/magicnrituals/models/block/blackthorn_log_horizontal.json
@@ -122,7 +120,6 @@ f21c74a2a04c602aaf7ce8c3414caab50d930256 assets/magicnrituals/models/block/strip
 8089f9701018dfe1636c7ef69728be0b6239494d assets/magicnrituals/models/item/aetherium_block.json
 a6cfcf0221ba08d3f27850bf7e19906261d89230 assets/magicnrituals/models/item/aetherium_deepslate_ore.json
 e1fb4fa6f9add06796e2d70bb56d72d3b9fa05d4 assets/magicnrituals/models/item/aetherium_ore.json
-2a78fe9583e044e8e91e19a658fbf2e726a1b8e6 assets/magicnrituals/models/item/altar_block.json
 c6aa0c33dad15ce539349c23ffb23b18ad2c1920 assets/magicnrituals/models/item/blackthorn_leaves.json
 1c0d5e53d677dc7fe4bae61266808f23992e61e5 assets/magicnrituals/models/item/blackthorn_log.json
 2f035133bdf1efb730e4686080552a26626d8268 assets/magicnrituals/models/item/blackthorn_planks.json

@@ -16,6 +16,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,8 +25,13 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.munum.magicnrituals.block.entity.ModBlockEntities;
 import net.munum.magicnrituals.item.ModItems;
+import net.munum.magicnrituals.recipe.GrowthChamberRecipe;
+import net.munum.magicnrituals.recipe.GrowthChamberRecipeInput;
+import net.munum.magicnrituals.recipe.ModRecipes;
 import net.munum.magicnrituals.screen.custom.GrowthChamberMenu;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class GrowthChamberBlockEntity extends BlockEntity implements MenuProvider {
     public final ItemStackHandler itemHandler = new ItemStackHandler(2) {
@@ -45,7 +51,7 @@ public class GrowthChamberBlockEntity extends BlockEntity implements MenuProvide
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 600;
 
     public GrowthChamberBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.GROWTH_CHAMBER_BE.get(), pPos, pBlockState);
@@ -140,11 +146,12 @@ public class GrowthChamberBlockEntity extends BlockEntity implements MenuProvide
 
     private void resetProgress() {
         this.progress = 0;
-        this.maxProgress = 72;
+        this.maxProgress = 600;
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.MOONSTONE.get());
+        Optional<RecipeHolder<GrowthChamberRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().output();
 
         itemHandler.extractItem(INPUT_SLOT, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -160,11 +167,18 @@ public class GrowthChamberBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private boolean hasRecipe() {
-        Item input = ModItems.MOONSTONE_DUST.get();
-        ItemStack output = new ItemStack(ModItems.MOONSTONE.get());
+        Optional<RecipeHolder<GrowthChamberRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
+        
+        ItemStack output = recipe.get().value().output();
+        return canInsertItemIntoOutputSlot(output) && canInsertAmountIntoOutputSlot(output.getCount());
+    }
 
-        return itemHandler.getStackInSlot(INPUT_SLOT).is(input) && canInsertItemIntoOutputSlot(output)
-                && canInsertAmountIntoOutputSlot(output.getCount());
+    private Optional<RecipeHolder<GrowthChamberRecipe>> getCurrentRecipe() {
+        return this.level.getRecipeManager()
+                .getRecipeFor(ModRecipes.GROWTH_CHAMBER_TYPE.get(),new GrowthChamberRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

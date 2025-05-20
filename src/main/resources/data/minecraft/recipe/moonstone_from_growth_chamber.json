@@ -1,0 +1,9 @@
+{
+  "type": "magicnrituals:growth_chamber",
+  "ingredient": {
+    "item": "magicnrituals:moonstone_dust"
+  },
+  "result": {
+    "id": "magicnrituals:moonstone"
+  }
+}

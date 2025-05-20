@@ -3,11 +3,11 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.25,
-  "group": "luminitite",
+  "group": "ruby",
   "ingredient": {
-    "item": "magicnrituals:rose_quartz_ore"
+    "item": "magicnrituals:ruby_nether_ore"
   },
   "result": {
-    "id": "magicnrituals:luminitite_ingot"
+    "id": "magicnrituals:ruby"
   }
 }

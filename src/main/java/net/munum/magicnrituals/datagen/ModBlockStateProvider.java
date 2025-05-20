@@ -49,7 +49,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.AETHERIUM_DEEPSLATE_ORE);
 
 
-        blockWithItem(ModBlocks.ALTAR_BLOCK);
+
 
         blockWithItem(ModBlocks.MOONSTONE_BLOCK);
 

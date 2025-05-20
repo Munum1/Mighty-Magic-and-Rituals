@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "magicnrituals:soulsteel_ingot"
+    },
+    "B": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "AAC",
+    "ABC",
+    "AAC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:arcane_circuit"
+  }
+}

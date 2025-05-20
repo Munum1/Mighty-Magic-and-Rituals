@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rose_quartz_deepslate_ore": {
+    "has_ruby_end_ore": {
       "conditions": {
         "items": [
           {
-            "items": "magicnrituals:rose_quartz_deepslate_ore"
+            "items": "magicnrituals:ruby_end_ore"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "magicnrituals:luminitite_ingot_from_blasting_rose_quartz_deepslate_ore"
+        "recipe": "magicnrituals:ruby_from_smelting_ruby_end_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_rose_quartz_deepslate_ore"
+      "has_ruby_end_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "magicnrituals:luminitite_ingot_from_blasting_rose_quartz_deepslate_ore"
+      "magicnrituals:ruby_from_smelting_ruby_end_ore"
     ]
   }
 }

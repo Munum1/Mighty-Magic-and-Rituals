@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:string"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "magicnrituals:moonstone_block"
+    }
+  },
+  "pattern": [
+    " BA",
+    "BCA",
+    " BA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicnrituals:moonstone_bow"
+  }
+}

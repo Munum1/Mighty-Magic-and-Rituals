@@ -3,11 +3,11 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.25,
-  "group": "luminitite",
+  "group": "rose_quartz",
   "ingredient": {
-    "item": "magicnrituals:rose_quartz_deepslate_ore"
+    "item": "magicnrituals:rose_quartz_end_ore"
   },
   "result": {
-    "id": "magicnrituals:luminitite_ingot"
+    "id": "magicnrituals:rose_quartz"
   }
 }

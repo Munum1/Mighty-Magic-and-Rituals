@@ -31,6 +31,7 @@ import net.munum.magicnrituals.fluid.ModFluids;
 import net.munum.magicnrituals.item.ModCreativeModeTabs;
 import net.munum.magicnrituals.item.ModItems;
 import net.munum.magicnrituals.potion.ModPotions;
+import net.munum.magicnrituals.recipe.ModRecipes;
 import net.munum.magicnrituals.screen.ModMenuTypes;
 import net.munum.magicnrituals.screen.custom.GrowthChamberScreen;
 import net.munum.magicnrituals.screen.custom.PedestalScreen;
@@ -78,6 +79,7 @@ public class MagicnRituals {
         ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
 
 

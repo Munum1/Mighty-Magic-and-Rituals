@@ -23,6 +23,8 @@ public class ModMenuTypes {
 
 
 
+
+
     public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);
     }

@@ -103,6 +103,25 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PEDESTAL.get());
                         output.accept(ModBlocks.GROWTH_CHAMBER.get());
 
+                        output.accept(ModBlocks.RUBY_ORE.get());
+                        output.accept(ModBlocks.RUBY_END_ORE.get());
+                        output.accept(ModBlocks.RUBY_NETHER_ORE.get());
+                        output.accept(ModBlocks.RUBY_DEEPSLATE_ORE.get());
+
+                        output.accept(ModBlocks.ROSE_QUARTZ_ORE.get());
+                        output.accept(ModBlocks.ROSE_QUARTZ_NETHER_ORE.get());
+                        output.accept(ModBlocks.ROSE_QUARTZ_END_ORE.get());
+                        output.accept(ModBlocks.ROSE_QUARTZ_DEEPSLATE_ORE.get());
+
+                        output.accept(ModBlocks.LUMINITITE_ORE.get());
+                        output.accept(ModBlocks.LUMINITITE_DEEPSLATE_ORE.get());
+
+                        output.accept(ModBlocks.AETHERIUM_ORE.get());
+                        output.accept(ModBlocks.AETHERIUM_DEEPSLATE_ORE.get());
+
+                        output.accept(ModBlocks.SOULSTEEL_ORE.get());
+                        output.accept(ModBlocks.SOULSTEEL_DEEPSLATE_ORE.get());
+
 
 
                         })

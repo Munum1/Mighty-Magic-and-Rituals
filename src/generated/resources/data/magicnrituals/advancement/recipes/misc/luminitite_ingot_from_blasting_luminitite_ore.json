@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_luminitite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "magicnrituals:luminitite_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "magicnrituals:luminitite_ingot_from_blasting_luminitite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_luminitite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "magicnrituals:luminitite_ingot_from_blasting_luminitite_ore"
+    ]
+  }
+}
